@@ -4,7 +4,8 @@ const browserState = {
   difficulty: "all",
   page: 1,
   pageSize: 18,
-  selectedRecordId: null
+  selectedRecordId: null,
+  cameraView: "thirdPerson"
 };
 
 const browserEls = {
@@ -28,7 +29,9 @@ const browserEls = {
   totalEpisodes: document.querySelector("#browser-total-episodes"),
   filteredRecords: document.querySelector("#filtered-records"),
   visibleDuration: document.querySelector("#visible-duration"),
-  filteredTasks: document.querySelector("#filtered-tasks")
+  filteredTasks: document.querySelector("#filtered-tasks"),
+  detailVideo: document.querySelector("#detail-video"),
+  cameraToggle: document.querySelector("#camera-toggle")
 };
 
 const tasks = window.AXIS_BROWSER_DATA?.tasks || [];
@@ -42,8 +45,14 @@ function formatNumber(value) {
 function formatDuration(totalSeconds) {
   const hours = Math.floor(totalSeconds / 3600);
   const minutes = Math.floor((totalSeconds % 3600) / 60);
+  const seconds = Math.round(totalSeconds % 60);
   if (hours > 0) return `${hours}h ${minutes}m`;
-  return `${Math.max(1, minutes)}m`;
+  if (minutes > 0) return `${minutes}m ${String(seconds).padStart(2, "0")}s`;
+  return `${Math.max(1, seconds)}s`;
+}
+
+function formatFrameValue(demo) {
+  return `${demo.estimatedFrames ? "~" : ""}${formatNumber(demo.frames)}`;
 }
 
 function getFilteredRecords() {
@@ -57,6 +66,8 @@ function getFilteredRecords() {
       task.slug,
       task.category,
       task.scene,
+      task.source,
+      demo.status,
       task.objects.join(" ")
     ].join(" ").toLowerCase();
     const matchesSearch = !query || text.includes(query);
@@ -118,12 +129,12 @@ function renderRecordTable() {
     row.dataset.recordId = id;
     row.innerHTML = `
       <td class="task-cell">
-        <strong>${task.slug.replace(/_\\d+$/, "")}</strong>
+        <strong>${task.title}</strong>
         <span>${task.scene}</span>
       </td>
       <td>${task.category}</td>
       <td>${demo.collector}</td>
-      <td>${formatNumber(demo.frames)}</td>
+      <td>${formatFrameValue(demo)}</td>
       <td>${demo.duration}</td>
     `;
     row.addEventListener("click", () => selectRecord(id));
@@ -159,23 +170,55 @@ function getSelectedRecord() {
   return records.find((record) => record.id === browserState.selectedRecordId) || records[0];
 }
 
+function getDemoVideoSource(demo) {
+  return demo.video?.[browserState.cameraView] || demo.video?.thirdPerson || demo.video?.wrist || "";
+}
+
+function updateCameraToggle(demo) {
+  if (!browserEls.cameraToggle) return;
+  browserEls.cameraToggle.querySelectorAll("[data-camera-view]").forEach((button) => {
+    const view = button.dataset.cameraView;
+    const hasView = Boolean(demo.video?.[view]);
+    button.disabled = !hasView;
+    button.classList.toggle("is-active", hasView && view === browserState.cameraView);
+  });
+}
+
+function updateDetailVideo(demo) {
+  if (!browserEls.detailVideo) return;
+  const source = browserEls.detailVideo.querySelector("source");
+  const nextSource = getDemoVideoSource(demo);
+  if (!source || !nextSource) return;
+  if (source.getAttribute("src") !== nextSource) {
+    source.setAttribute("src", nextSource);
+    browserEls.detailVideo.load();
+  }
+}
+
 function renderRecordDetail() {
   const selected = getSelectedRecord();
   if (!selected) return;
   const { task, demo } = selected;
+  const viewAvailable = Boolean(demo.video?.[browserState.cameraView]);
+  if (!viewAvailable) browserState.cameraView = demo.video?.thirdPerson ? "thirdPerson" : "wrist";
 
-  browserEls.detailKicker.textContent = "Demo detail";
+  updateDetailVideo(demo);
+  updateCameraToggle(demo);
+
+  browserEls.detailKicker.textContent = `${task.id} / ${demo.status}`;
   browserEls.detailTitle.textContent = task.title;
   browserEls.detailRecordId.textContent = demo.id;
   browserEls.detailDescription.textContent = task.description;
 
   browserEls.taskSummary.innerHTML = `
     <div><span>Duration</span><strong>${demo.duration}</strong></div>
-    <div><span>Frames</span><strong>${formatNumber(demo.frames)}</strong></div>
+    <div><span>Frames</span><strong>${formatFrameValue(demo)}</strong></div>
     <div><span>Category</span><strong>${task.category}</strong></div>
     <div><span>Scene</span><strong>${task.scene}</strong></div>
-    <div><span>Collector</span><strong>${demo.collector}</strong></div>
+    <div><span>Episode</span><strong>${String(demo.sourceEpisodeIndex).padStart(3, "0")}</strong></div>
     <div><span>Views</span><strong>${demo.cameraViews.length}</strong></div>
+    <div><span>Clean Episodes</span><strong>${formatNumber(demo.cleaning.cleanEpisodes)}</strong></div>
+    <div><span>Clean Frames</span><strong>${formatNumber(demo.cleaning.cleanFrames)}</strong></div>
   `;
 
   renderChips(browserEls.detailTags, task.objects);
@@ -201,6 +244,15 @@ function setupPagination() {
   });
 }
 
+function setupCameraToggle() {
+  browserEls.cameraToggle?.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-camera-view]");
+    if (!button || button.disabled) return;
+    browserState.cameraView = button.dataset.cameraView;
+    renderRecordDetail();
+  });
+}
+
 function setupFilters() {
   browserEls.applyFilters?.addEventListener("click", applyFilters);
   [browserEls.category, browserEls.difficulty].forEach((field) => {
@@ -218,6 +270,7 @@ function initializeBrowser() {
   populateCategoryFilter();
   setupFilters();
   setupPagination();
+  setupCameraToggle();
   renderRecordTable();
   renderRecordDetail();
 }

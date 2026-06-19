@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AXIS Data Browser</title>
-  <meta name="description" content="Browse AXIS-Datasets demo records, task metadata, and preview clips in a compact dark explorer.">
+  <meta name="description" content="Browse real AXIS clean LeRobot demo records, task metadata, and packaged preview clips in a compact dark explorer.">
   <meta property="og:title" content="AXIS Data Browser">
   <meta property="og:description" content="Demo-level browser for AXIS-Datasets with compact filtering, table browsing, and detail preview.">
   <meta property="og:type" content="website">
@@ -42,18 +42,18 @@
         <div class="browser-hero-copy">
           <p class="kicker">Research Explorer</p>
           <h1>AXIS Data Browser</h1>
-          <p class="hero-tagline">Demo-level access for AXIS-Datasets. Browse clips, inspect task metadata, and keep the preview surface focused.</p>
+          <p class="hero-tagline">Demo-level access for a packaged clean LeRobot subset. Browse real clips, inspect task metadata, and compare camera views.</p>
           <div class="button-row">
             <a class="btn btn-primary" href="#explorer">Open explorer</a>
           </div>
         </div>
         <div class="browser-hero-panel" aria-label="Browser summary">
           <div>
-            <strong id="browser-total-episodes">1,035</strong>
+            <strong id="browser-total-episodes">36</strong>
             <span>demo records</span>
           </div>
           <div>
-            <strong id="browser-total-tasks">207</strong>
+            <strong id="browser-total-tasks">12</strong>
             <span>tasks represented</span>
           </div>
           <div>
@@ -69,36 +69,44 @@
         <div class="browser-section-head">
           <p class="kicker">Dataset Showcase</p>
           <h2 id="showcase-heading">Robot manipulation demos</h2>
-          <p>Representative AXIS clips across tabletop, kitchen, assembly, workspace, and cleaning scenes.</p>
+          <p>Representative clean-pass AXIS clips packaged from the LeRobot export under <span class="nowrap">data_lerobot/clean</span>.</p>
         </div>
         <div class="showcase-grid">
           <article class="showcase-card">
-            <video muted loop playsinline poster="./assets/images/demo-poster.jpg">
-              <source src="./assets/videos/demo-placeholder.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./assets/videos/real/task-800-episode-000-third-person.mp4" type="video/mp4">
             </video>
-            <span>Put carrot on plate</span>
+            <span>Put the Scissors on the Gift Box</span>
           </article>
           <article class="showcase-card">
-            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for object sorting">
-            <span>Sort colored balls</span>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./assets/videos/real/task-801-episode-000-third-person.mp4" type="video/mp4">
+            </video>
+            <span>Put the Tape on the Ribbon Roll</span>
           </article>
           <article class="showcase-card">
-            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for drawer articulation">
-            <span>Open small drawer</span>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./assets/videos/real/task-802-episode-000-third-person.mp4" type="video/mp4">
+            </video>
+            <span>Put the Tape beside the Scissors</span>
           </article>
           <article class="showcase-card">
-            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for assembly">
-            <span>Place gear on shaft</span>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./assets/videos/real/task-806-episode-000-third-person.mp4" type="video/mp4">
+            </video>
+            <span>Put the Juice on the Napkin Box</span>
           </article>
           <article class="showcase-card showcase-card-large">
-            <video muted loop playsinline poster="./assets/images/demo-poster.jpg">
-              <source src="./assets/videos/demo-placeholder.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./assets/videos/real/task-808-episode-000-third-person.mp4" type="video/mp4">
             </video>
-            <span>Thread ring onto peg</span>
+            <span>Separate the Sandwich from the Apple</span>
           </article>
           <article class="showcase-card">
-            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for wiping">
-            <span>Wipe table area</span>
+            <video autoplay muted loop playsinline preload="metadata">
+              <source src="./assets/videos/real/task-1002-episode-000-third-person.mp4" type="video/mp4">
+            </video>
+            <span>Put the Microphone on the Speaker</span>
           </article>
         </div>
       </div>
@@ -110,11 +118,11 @@
           <div>
             <p class="kicker">Explorer</p>
             <h2>Demo-level dataset access</h2>
-            <p>Filter representative AXIS demo records, scan the table, then preview the selected clip and core metadata.</p>
+            <p>Filter real clean LeRobot demo records, scan the table, then preview the selected episode and core metadata.</p>
           </div>
           <div class="explorer-stat-grid" aria-label="Filtered browser summary">
             <div>
-              <strong id="filtered-records">1,035</strong>
+              <strong id="filtered-records">36</strong>
               <span>Filtered demos</span>
             </div>
             <div>
@@ -122,7 +130,7 @@
               <span>Visible duration</span>
             </div>
             <div>
-              <strong id="filtered-tasks">207</strong>
+              <strong id="filtered-tasks">12</strong>
               <span>Tasks represented</span>
             </div>
           </div>
@@ -160,7 +168,7 @@
                 <strong id="visible-task-count">18</strong>
                 <span id="visible-task-label">visible on this page</span>
               </div>
-              <span class="browser-note">Preview manifest</span>
+              <span class="browser-note">Clean LeRobot subset</span>
             </div>
             <div class="table-scroller">
               <table class="explorer-table">
@@ -187,14 +195,18 @@
 
           <aside class="task-detail" aria-label="Selected demo detail">
             <div class="detail-video-frame">
-              <video id="detail-video" controls muted loop playsinline poster="./assets/images/demo-poster.jpg">
-                <source src="./assets/videos/demo-placeholder.mp4" type="video/mp4">
+              <video id="detail-video" controls muted loop playsinline preload="metadata">
+                <source src="./assets/videos/real/task-800-episode-000-third-person.mp4" type="video/mp4">
               </video>
+            </div>
+            <div class="camera-toggle" id="camera-toggle" aria-label="Camera view">
+              <button class="is-active" type="button" data-camera-view="thirdPerson">Third-person</button>
+              <button type="button" data-camera-view="wrist">Wrist</button>
             </div>
             <div class="detail-head">
               <p class="kicker" id="detail-kicker">Demo detail</p>
-              <h3 id="detail-title">Put the carrot on the plate</h3>
-              <p id="detail-record-id">AXIS-500-D01</p>
+              <h3 id="detail-title">Put the Scissors on the Gift Box</h3>
+              <p id="detail-record-id">AXIS-800-E000</p>
             </div>
             <div id="task-summary" class="detail-meta-grid"></div>
             <div class="detail-block">

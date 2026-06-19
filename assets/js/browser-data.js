@@ -1,156 +1,1224 @@
-const AXIS_TASK_BLUEPRINTS = [
-  ["put", "carrot", "on", "plate", "Pick-place", "tabletop"],
-  ["place", "black bowl", "on", "ceramic plate", "Pick-place", "tabletop"],
-  ["insert", "red cube", "into", "wooden box", "Insertion", "tabletop"],
-  ["stack", "blue blocks", "onto", "tower base", "Stacking", "tabletop"],
-  ["move", "toy car", "to", "garage slot", "Navigation", "workspace"],
-  ["hang", "mug", "on", "rack hook", "Hanging", "kitchen"],
-  ["sort", "colored balls", "into", "matching bins", "Sorting", "workspace"],
-  ["push", "drawer handle", "to", "closed state", "Articulation", "cabinet"],
-  ["open", "small drawer", "with", "pull handle", "Articulation", "cabinet"],
-  ["align", "spoon", "inside", "tray groove", "Alignment", "kitchen"],
-  ["drop", "wood peg", "into", "round hole", "Insertion", "assembly"],
-  ["transfer", "foam cube", "to", "basket", "Pick-place", "tabletop"],
-  ["press", "green button", "until", "activation", "Contact", "control_panel"],
-  ["slide", "lid", "onto", "container", "Articulation", "kitchen"],
-  ["rotate", "dial", "to", "target mark", "Contact", "control_panel"],
-  ["place", "banana", "inside", "fruit bowl", "Pick-place", "kitchen"],
-  ["lift", "fabric square", "onto", "folding mat", "Deformable", "laundry"],
-  ["pack", "small box", "into", "shipping bin", "Packing", "workspace"],
-  ["arrange", "utensils", "inside", "organizer", "Sorting", "kitchen"],
-  ["clear", "wood blocks", "from", "marked zone", "Sweeping", "tabletop"],
-  ["seat", "round cap", "onto", "bottle", "Assembly", "workspace"],
-  ["pour", "plastic beads", "into", "cup", "Pouring", "tabletop"],
-  ["thread", "ring", "onto", "vertical peg", "Insertion", "assembly"],
-  ["balance", "cube", "on", "scale pad", "Placement", "workspace"],
-  ["place", "tomato", "on", "cutting board", "Pick-place", "kitchen"],
-  ["push", "switch", "to", "right position", "Contact", "control_panel"],
-  ["remove", "block", "from", "slot", "Extraction", "assembly"],
-  ["nest", "cup", "inside", "larger cup", "Nesting", "kitchen"],
-  ["insert", "card", "into", "mail slot", "Insertion", "office"],
-  ["set", "cylinder", "upright", "on mat", "Placement", "tabletop"],
-  ["drag", "cloth", "across", "dust patch", "Wiping", "cleaning"],
-  ["collect", "coins", "into", "small tray", "Sorting", "workspace"],
-  ["place", "gear", "onto", "shaft", "Assembly", "assembly"],
-  ["unload", "plate", "from", "rack", "Extraction", "kitchen"],
-  ["drop", "sponge", "into", "sink caddy", "Pick-place", "kitchen"],
-  ["push", "cart", "to", "parking marker", "Navigation", "workspace"],
-  ["align", "book", "with", "shelf edge", "Alignment", "office"],
-  ["fold", "towel", "onto", "center line", "Deformable", "laundry"],
-  ["place", "marker", "inside", "pen cup", "Sorting", "office"],
-  ["transfer", "metal washer", "to", "parts bowl", "Pick-place", "assembly"],
-  ["pull", "tab", "to", "open lid", "Articulation", "workspace"],
-  ["cover", "jar", "with", "round lid", "Assembly", "kitchen"],
-  ["dock", "tool handle", "into", "holder", "Insertion", "workspace"],
-  ["place", "toy duck", "inside", "water tray", "Pick-place", "tabletop"],
-  ["sort", "fruit pieces", "onto", "serving plate", "Sorting", "kitchen"],
-  ["scoop", "foam balls", "into", "cup", "Pouring", "tabletop"],
-  ["wipe", "table area", "with", "cloth pad", "Wiping", "cleaning"],
-  ["position", "camera block", "at", "target pose", "Placement", "workspace"]
-];
-
-const AXIS_SCENES = [
-  "tabletop_lab",
-  "kitchen_counter",
-  "assembly_bench",
-  "office_desk",
-  "laundry_table",
-  "cleaning_station",
-  "control_panel",
-  "storage_shelf"
-];
-
-const AXIS_COLLECTORS = [
-  "collector-014",
-  "collector-029",
-  "collector-047",
-  "collector-083",
-  "collector-116",
-  "collector-144",
-  "collector-205",
-  "collector-233"
-];
-
-function titleCaseTask(words) {
-  return words
-    .split(" ")
-    .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-    .join(" ");
-}
-
-function makeTaskSlug(blueprint, index) {
-  const [verb, object, relation, target] = blueprint;
-  return `${verb}_${object}_${relation}_${target}_${index}`
-    .replace(/[^a-z0-9]+/gi, "_")
-    .replace(/^_|_$/g, "")
-    .toLowerCase();
-}
-
-function makeEpisode(taskIndex, demoIndex, taskId, category) {
-  const frames = 760 + ((taskIndex * 137 + demoIndex * 211) % 1480);
-  const rawHz = 6 + ((taskIndex + demoIndex) % 3);
-  const durationSeconds = Math.round(frames / 20);
-  const minutes = Math.floor(durationSeconds / 60);
-  const seconds = String(durationSeconds % 60).padStart(2, "0");
-  const removed = 4 + ((taskIndex * 3 + demoIndex * 5) % 17);
-  const accelerationDrop = 41 + ((taskIndex * 7 + demoIndex * 3) % 39);
-  const jerkDrop = 48 + ((taskIndex * 5 + demoIndex * 11) % 36);
-  const replay = 84 + ((taskIndex + demoIndex * 2) % 14);
-
-  return {
-    id: `AXIS-${taskId}-D${String(demoIndex + 1).padStart(2, "0")}`,
-    collector: AXIS_COLLECTORS[(taskIndex + demoIndex) % AXIS_COLLECTORS.length],
-    duration: `${minutes}m ${seconds}s`,
-    durationSeconds,
-    frames,
-    rawHz,
-    targetHz: 20,
-    status: demoIndex === 4 && taskIndex % 9 === 0 ? "needs review" : "verified",
-    cameraViews: ["third-view RGB", "wrist RGB"],
-    cleaning: {
-      removed,
-      accelerationDrop,
-      jerkDrop,
-      replay
-    },
-    augmentation: {
-      variants: 12 + ((taskIndex + demoIndex) % 9),
-      lighting: `${2800 + ((taskIndex * 173 + demoIndex * 97) % 3700)}K`,
-      cameraJitter: `${4 + ((taskIndex + demoIndex) % 5)} deg`,
-      sceneMode: "full USD scene"
-    },
-    category
-  };
-}
-
-function makeAxisTask(index) {
-  const blueprint = AXIS_TASK_BLUEPRINTS[index % AXIS_TASK_BLUEPRINTS.length];
-  const [verb, object, relation, target, category, baseScene] = blueprint;
-  const taskId = 500 + index;
-  const difficulty = (index % 5) + 1;
-  const scene = AXIS_SCENES[(index + difficulty) % AXIS_SCENES.length];
-  const title = titleCaseTask(`${verb} the ${object} ${relation} the ${target}`);
-  const slug = makeTaskSlug(blueprint, index);
-  const demos = Array.from({ length: 5 }, (_, demoIndex) => makeEpisode(index, demoIndex, taskId, category));
-
-  return {
-    id: `AXIS-${taskId}`,
-    taskId,
-    title,
-    slug,
-    category,
-    difficulty,
-    scene,
-    baseScene,
-    robot: "Franka Panda",
-    embodiment: "single-arm + gripper",
-    objects: [object, target],
-    description: `A recorded robot demonstration completes a ${category.toLowerCase()} manipulation task by moving the robot to ${verb} the ${object} ${relation} the ${target}. The trajectory is validated, cleaned, replayed, augmented, and exported for policy learning.`,
-    demos
-  };
-}
-
 window.AXIS_BROWSER_DATA = {
-  tasks: Array.from({ length: 207 }, (_, index) => makeAxisTask(index)),
-  manifestNote: "Preview seed manifest. Replace this file with real task metadata when public AXIS-Datasets exports are available."
+  "sourceSummary": {
+    "cleanExportedTasks": 200,
+    "cleanEpisodes": 32300,
+    "cleanFrames": 3866294,
+    "fps": 30,
+    "source": "axis-training/data_lerobot/clean"
+  },
+  "tasks": [
+    {
+      "id": "AXIS-800",
+      "taskId": 800,
+      "title": "Put the Scissors on the Gift Box",
+      "slug": "put_the_scissors_on_the_gift_box",
+      "category": "Placement",
+      "difficulty": 1,
+      "scene": "gift_wrap_station",
+      "baseScene": "gift_wrap_station",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Scissors",
+        "Gift Box"
+      ],
+      "source": "data_lerobot/clean/task_800_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 800: Put the Scissors on the Gift Box. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-800-E000",
+          "collector": "clean LeRobot export",
+          "duration": "7s",
+          "durationSeconds": 7,
+          "frames": 218,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-800-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-800-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1791,
+            "cleanEpisodes": 384,
+            "cleanFrames": 83762,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-800-E001",
+          "collector": "clean LeRobot export",
+          "duration": "7s",
+          "durationSeconds": 7,
+          "frames": 218,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-800-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-800-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1791,
+            "cleanEpisodes": 384,
+            "cleanFrames": 83762,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-800-E002",
+          "collector": "clean LeRobot export",
+          "duration": "7s",
+          "durationSeconds": 7,
+          "frames": 218,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-800-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-800-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1791,
+            "cleanEpisodes": 384,
+            "cleanFrames": 83762,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-801",
+      "taskId": 801,
+      "title": "Put the Tape on the Ribbon Roll",
+      "slug": "put_the_tape_on_the_ribbon_roll",
+      "category": "Placement",
+      "difficulty": 2,
+      "scene": "gift_wrap_station",
+      "baseScene": "gift_wrap_station",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Tape",
+        "Ribbon Roll"
+      ],
+      "source": "data_lerobot/clean/task_801_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 801: Put the Tape on the Ribbon Roll. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-801-E000",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 134,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-801-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-801-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1590,
+            "cleanEpisodes": 188,
+            "cleanFrames": 25149,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-801-E001",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 134,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-801-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-801-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1590,
+            "cleanEpisodes": 188,
+            "cleanFrames": 25149,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-801-E002",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 134,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-801-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-801-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1590,
+            "cleanEpisodes": 188,
+            "cleanFrames": 25149,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-802",
+      "taskId": 802,
+      "title": "Put the Tape beside the Scissors",
+      "slug": "put_the_tape_beside_the_scissors",
+      "category": "Placement",
+      "difficulty": 3,
+      "scene": "gift_wrap_station",
+      "baseScene": "gift_wrap_station",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Tape",
+        "Scissors"
+      ],
+      "source": "data_lerobot/clean/task_802_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 802: Put the Tape beside the Scissors. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-802-E000",
+          "collector": "clean LeRobot export",
+          "duration": "3s",
+          "durationSeconds": 3,
+          "frames": 86,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-802-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-802-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1490,
+            "cleanEpisodes": 314,
+            "cleanFrames": 27063,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-802-E001",
+          "collector": "clean LeRobot export",
+          "duration": "3s",
+          "durationSeconds": 3,
+          "frames": 86,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-802-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-802-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1490,
+            "cleanEpisodes": 314,
+            "cleanFrames": 27063,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-802-E002",
+          "collector": "clean LeRobot export",
+          "duration": "3s",
+          "durationSeconds": 3,
+          "frames": 86,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-802-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-802-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1490,
+            "cleanEpisodes": 314,
+            "cleanFrames": 27063,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-803",
+      "taskId": 803,
+      "title": "Put the Tape beside the Gift Box",
+      "slug": "put_the_tape_beside_the_gift_box",
+      "category": "Placement",
+      "difficulty": 4,
+      "scene": "gift_wrap_station",
+      "baseScene": "gift_wrap_station",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Tape",
+        "Gift Box"
+      ],
+      "source": "data_lerobot/clean/task_803_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 803: Put the Tape beside the Gift Box. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-803-E000",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 106,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-803-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-803-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1831,
+            "cleanEpisodes": 355,
+            "cleanFrames": 37747,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-803-E001",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 106,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-803-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-803-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1831,
+            "cleanEpisodes": 355,
+            "cleanFrames": 37747,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-803-E002",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 106,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-803-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-803-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1831,
+            "cleanEpisodes": 355,
+            "cleanFrames": 37747,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-804",
+      "taskId": 804,
+      "title": "Put the Scissors beside the Ribbon Roll",
+      "slug": "put_the_scissors_beside_the_ribbon_roll",
+      "category": "Placement",
+      "difficulty": 5,
+      "scene": "gift_wrap_station",
+      "baseScene": "gift_wrap_station",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Scissors",
+        "Ribbon Roll"
+      ],
+      "source": "data_lerobot/clean/task_804_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 804: Put the Scissors beside the Ribbon Roll. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-804-E000",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 125,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-804-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-804-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 2710,
+            "cleanEpisodes": 298,
+            "cleanFrames": 37297,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-804-E001",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 125,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-804-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-804-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 2710,
+            "cleanEpisodes": 298,
+            "cleanFrames": 37297,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-804-E002",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 125,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-804-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-804-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 2710,
+            "cleanEpisodes": 298,
+            "cleanFrames": 37297,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-806",
+      "taskId": 806,
+      "title": "Put the Juice on the Napkin Box",
+      "slug": "put_the_juice_on_the_napkin_box",
+      "category": "Placement",
+      "difficulty": 1,
+      "scene": "snack_table",
+      "baseScene": "snack_table",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Juice",
+        "Napkin Box"
+      ],
+      "source": "data_lerobot/clean/task_806_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 806: Put the Juice on the Napkin Box. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-806-E000",
+          "collector": "clean LeRobot export",
+          "duration": "5s",
+          "durationSeconds": 5,
+          "frames": 157,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-806-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-806-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1511,
+            "cleanEpisodes": 105,
+            "cleanFrames": 16532,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-806-E001",
+          "collector": "clean LeRobot export",
+          "duration": "5s",
+          "durationSeconds": 5,
+          "frames": 157,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-806-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-806-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1511,
+            "cleanEpisodes": 105,
+            "cleanFrames": 16532,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-806-E002",
+          "collector": "clean LeRobot export",
+          "duration": "5s",
+          "durationSeconds": 5,
+          "frames": 157,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-806-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-806-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1511,
+            "cleanEpisodes": 105,
+            "cleanFrames": 16532,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-807",
+      "taskId": 807,
+      "title": "Put the Sandwich on the Napkin Box",
+      "slug": "put_the_sandwich_on_the_napkin_box",
+      "category": "Placement",
+      "difficulty": 2,
+      "scene": "snack_table",
+      "baseScene": "snack_table",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Sandwich",
+        "Napkin Box"
+      ],
+      "source": "data_lerobot/clean/task_807_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 807: Put the Sandwich on the Napkin Box. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-807-E000",
+          "collector": "clean LeRobot export",
+          "duration": "5s",
+          "durationSeconds": 5,
+          "frames": 140,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-807-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-807-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1509,
+            "cleanEpisodes": 137,
+            "cleanFrames": 19232,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-807-E001",
+          "collector": "clean LeRobot export",
+          "duration": "5s",
+          "durationSeconds": 5,
+          "frames": 140,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-807-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-807-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1509,
+            "cleanEpisodes": 137,
+            "cleanFrames": 19232,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-807-E002",
+          "collector": "clean LeRobot export",
+          "duration": "5s",
+          "durationSeconds": 5,
+          "frames": 140,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-807-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-807-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1509,
+            "cleanEpisodes": 137,
+            "cleanFrames": 19232,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-808",
+      "taskId": 808,
+      "title": "Separate the Sandwich from the Apple",
+      "slug": "separate_the_sandwich_from_the_apple",
+      "category": "Separation",
+      "difficulty": 3,
+      "scene": "snack_table",
+      "baseScene": "snack_table",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Sandwich",
+        "Apple"
+      ],
+      "source": "data_lerobot/clean/task_808_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 808: Separate the Sandwich from the Apple. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-808-E000",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 127,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-808-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-808-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1373,
+            "cleanEpisodes": 409,
+            "cleanFrames": 51878,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        },
+        {
+          "id": "AXIS-808-E001",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 127,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-808-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-808-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1373,
+            "cleanEpisodes": 409,
+            "cleanFrames": 51878,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        },
+        {
+          "id": "AXIS-808-E002",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 127,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-808-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-808-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1373,
+            "cleanEpisodes": 409,
+            "cleanFrames": 51878,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-809",
+      "taskId": 809,
+      "title": "Separate the Sandwich from the Juice",
+      "slug": "separate_the_sandwich_from_the_juice",
+      "category": "Separation",
+      "difficulty": 4,
+      "scene": "snack_table",
+      "baseScene": "snack_table",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Sandwich",
+        "Juice"
+      ],
+      "source": "data_lerobot/clean/task_809_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 809: Separate the Sandwich from the Juice. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-809-E000",
+          "collector": "clean LeRobot export",
+          "duration": "3s",
+          "durationSeconds": 3,
+          "frames": 89,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-809-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-809-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 2944,
+            "cleanEpisodes": 666,
+            "cleanFrames": 59551,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        },
+        {
+          "id": "AXIS-809-E001",
+          "collector": "clean LeRobot export",
+          "duration": "3s",
+          "durationSeconds": 3,
+          "frames": 89,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-809-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-809-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 2944,
+            "cleanEpisodes": 666,
+            "cleanFrames": 59551,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        },
+        {
+          "id": "AXIS-809-E002",
+          "collector": "clean LeRobot export",
+          "duration": "3s",
+          "durationSeconds": 3,
+          "frames": 89,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-809-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-809-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 2944,
+            "cleanEpisodes": 666,
+            "cleanFrames": 59551,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-810",
+      "taskId": 810,
+      "title": "Separate the Sandwich from the Napkin Box",
+      "slug": "separate_the_sandwich_from_the_napkin_box",
+      "category": "Separation",
+      "difficulty": 5,
+      "scene": "snack_table",
+      "baseScene": "snack_table",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Sandwich",
+        "Napkin Box"
+      ],
+      "source": "data_lerobot/clean/task_810_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 810: Separate the Sandwich from the Napkin Box. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-810-E000",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 132,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-810-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-810-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1841,
+            "cleanEpisodes": 550,
+            "cleanFrames": 72813,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        },
+        {
+          "id": "AXIS-810-E001",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 132,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-810-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-810-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1841,
+            "cleanEpisodes": 550,
+            "cleanFrames": 72813,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        },
+        {
+          "id": "AXIS-810-E002",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 132,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-810-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-810-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1841,
+            "cleanEpisodes": 550,
+            "cleanFrames": 72813,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Separation"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-1002",
+      "taskId": 1002,
+      "title": "Put the Microphone on the Speaker",
+      "slug": "put_the_microphone_on_the_speaker",
+      "category": "Placement",
+      "difficulty": 1,
+      "scene": "media_desk",
+      "baseScene": "media_desk",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Microphone",
+        "Speaker"
+      ],
+      "source": "data_lerobot/clean/task_1002_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 1002: Put the Microphone on the Speaker. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-1002-E000",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 130,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-1002-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-1002-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1052,
+            "cleanEpisodes": 171,
+            "cleanFrames": 22310,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-1002-E001",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 130,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-1002-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-1002-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1052,
+            "cleanEpisodes": 171,
+            "cleanFrames": 22310,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-1002-E002",
+          "collector": "clean LeRobot export",
+          "duration": "4s",
+          "durationSeconds": 4,
+          "frames": 130,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-1002-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-1002-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1052,
+            "cleanEpisodes": 171,
+            "cleanFrames": 22310,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    },
+    {
+      "id": "AXIS-1013",
+      "taskId": 1013,
+      "title": "Put the Computer Mouse on the Notebook",
+      "slug": "put_the_computer_mouse_on_the_notebook",
+      "category": "Placement",
+      "difficulty": 2,
+      "scene": "office_desk",
+      "baseScene": "office_desk",
+      "robot": "Franka",
+      "embodiment": "single-arm + gripper",
+      "objects": [
+        "Computer Mouse",
+        "Notebook"
+      ],
+      "source": "data_lerobot/clean/task_1013_isaac_state_train",
+      "description": "Real cleaned LeRobot export for task 1013: Put the Computer Mouse on the Notebook. This packaged browser subset includes three clean-pass episodes with third-person and wrist RGB videos.",
+      "demos": [
+        {
+          "id": "AXIS-1013-E000",
+          "collector": "clean LeRobot export",
+          "duration": "6s",
+          "durationSeconds": 6,
+          "frames": 165,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 0,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-1013-episode-000-third-person.mp4",
+            "wrist": "./assets/videos/real/task-1013-episode-000-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1179,
+            "cleanEpisodes": 79,
+            "cleanFrames": 13046,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-1013-E001",
+          "collector": "clean LeRobot export",
+          "duration": "6s",
+          "durationSeconds": 6,
+          "frames": 165,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 1,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-1013-episode-001-third-person.mp4",
+            "wrist": "./assets/videos/real/task-1013-episode-001-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1179,
+            "cleanEpisodes": 79,
+            "cleanFrames": 13046,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        },
+        {
+          "id": "AXIS-1013-E002",
+          "collector": "clean LeRobot export",
+          "duration": "6s",
+          "durationSeconds": 6,
+          "frames": 165,
+          "estimatedFrames": true,
+          "rawHz": 30,
+          "targetHz": 30,
+          "status": "clean pass",
+          "sourceEpisodeIndex": 2,
+          "cameraViews": [
+            "third-person RGB",
+            "wrist RGB"
+          ],
+          "video": {
+            "thirdPerson": "./assets/videos/real/task-1013-episode-002-third-person.mp4",
+            "wrist": "./assets/videos/real/task-1013-episode-002-wrist.mp4"
+          },
+          "cleaning": {
+            "sourceEpisodes": 1179,
+            "cleanEpisodes": 79,
+            "cleanFrames": 13046,
+            "filter": "traj_check final_pass == 1"
+          },
+          "category": "Placement"
+        }
+      ]
+    }
+  ],
+  "manifestNote": "Real clean LeRobot demo subset packaged from axis-training/data_lerobot/clean; all listed records point to local mp4 assets copied from the clean export."
 };

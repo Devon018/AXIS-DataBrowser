@@ -740,6 +740,10 @@
   line-height: 1.7;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .showcase-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -763,6 +767,7 @@
 
 .showcase-card img,
 .showcase-card video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
@@ -986,12 +991,44 @@
 }
 
 .detail-video-frame video {
+  display: block;
   width: 100%;
   aspect-ratio: 16 / 10;
   object-fit: cover;
   border-radius: 16px;
   background: #0c0a09;
   filter: brightness(0.78) saturate(0.9);
+}
+
+.camera-toggle {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+  padding: 10px 18px 0;
+}
+
+.camera-toggle button {
+  min-width: 0;
+  min-height: 34px;
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(246, 240, 232, 0.58);
+  font: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.camera-toggle button.is-active {
+  border-color: rgba(238, 151, 98, 0.46);
+  background: rgba(238, 151, 98, 0.14);
+  color: #f6f0e8;
+}
+
+.camera-toggle button:disabled {
+  cursor: not-allowed;
+  opacity: 0.42;
 }
 
 .detail-head {
