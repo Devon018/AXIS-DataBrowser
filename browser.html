@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AXIS Data Browser</title>
+  <meta name="description" content="Browse AXIS-Datasets demo records, task metadata, and preview clips in a compact dark explorer.">
+  <meta property="og:title" content="AXIS Data Browser">
+  <meta property="og:description" content="Demo-level browser for AXIS-Datasets with compact filtering, table browsing, and detail preview.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="./assets/images/demo-poster.jpg">
+  <link rel="icon" href="./assets/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="stylesheet" href="./assets/css/browser.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="./browser.html" aria-label="AXIS Data Browser home">
+        <span class="brand-mark" aria-hidden="true">A</span>
+        <span>
+          <strong>AXIS</strong>
+          <small>Data Browser</small>
+        </span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="nav" aria-label="Primary navigation">
+        <a href="#showcase">Demos</a>
+        <a class="nav-cta" href="#explorer">Explorer</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="browser-hero">
+      <div class="browser-hero-glow" aria-hidden="true"></div>
+      <div class="container browser-hero-grid">
+        <div class="browser-hero-copy">
+          <p class="kicker">Research Explorer</p>
+          <h1>AXIS Data Browser</h1>
+          <p class="hero-tagline">Demo-level access for AXIS-Datasets. Browse clips, inspect task metadata, and keep the preview surface focused.</p>
+          <div class="button-row">
+            <a class="btn btn-primary" href="#explorer">Open explorer</a>
+          </div>
+        </div>
+        <div class="browser-hero-panel" aria-label="Browser summary">
+          <div>
+            <strong id="browser-total-episodes">1,035</strong>
+            <span>demo records</span>
+          </div>
+          <div>
+            <strong id="browser-total-tasks">207</strong>
+            <span>tasks represented</span>
+          </div>
+          <div>
+            <strong>2 views</strong>
+            <span>third-view and wrist RGB</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="demo-showcase" id="showcase" aria-labelledby="showcase-heading">
+      <div class="container">
+        <div class="browser-section-head">
+          <p class="kicker">Dataset Showcase</p>
+          <h2 id="showcase-heading">Robot manipulation demos</h2>
+          <p>Representative AXIS clips across tabletop, kitchen, assembly, workspace, and cleaning scenes.</p>
+        </div>
+        <div class="showcase-grid">
+          <article class="showcase-card">
+            <video muted loop playsinline poster="./assets/images/demo-poster.jpg">
+              <source src="./assets/videos/demo-placeholder.mp4" type="video/mp4">
+            </video>
+            <span>Put carrot on plate</span>
+          </article>
+          <article class="showcase-card">
+            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for object sorting">
+            <span>Sort colored balls</span>
+          </article>
+          <article class="showcase-card">
+            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for drawer articulation">
+            <span>Open small drawer</span>
+          </article>
+          <article class="showcase-card">
+            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for assembly">
+            <span>Place gear on shaft</span>
+          </article>
+          <article class="showcase-card showcase-card-large">
+            <video muted loop playsinline poster="./assets/images/demo-poster.jpg">
+              <source src="./assets/videos/demo-placeholder.mp4" type="video/mp4">
+            </video>
+            <span>Thread ring onto peg</span>
+          </article>
+          <article class="showcase-card">
+            <img src="./assets/images/demo-poster.jpg" alt="AXIS demo preview for wiping">
+            <span>Wipe table area</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="browser-shell" id="explorer">
+      <div class="container">
+        <div class="explorer-header">
+          <div>
+            <p class="kicker">Explorer</p>
+            <h2>Demo-level dataset access</h2>
+            <p>Filter representative AXIS demo records, scan the table, then preview the selected clip and core metadata.</p>
+          </div>
+          <div class="explorer-stat-grid" aria-label="Filtered browser summary">
+            <div>
+              <strong id="filtered-records">1,035</strong>
+              <span>Filtered demos</span>
+            </div>
+            <div>
+              <strong id="visible-duration">0m</strong>
+              <span>Visible duration</span>
+            </div>
+            <div>
+              <strong id="filtered-tasks">207</strong>
+              <span>Tasks represented</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="browser-filters" aria-label="Dataset filters">
+          <label class="filter-field search-field">
+            <span>Search</span>
+            <input id="task-search" type="search" placeholder="Search demos, tasks, scenes, or objects">
+          </label>
+          <label class="filter-field">
+            <span>Category</span>
+            <select id="category-filter">
+              <option value="all">All categories</option>
+            </select>
+          </label>
+          <label class="filter-field">
+            <span>Difficulty</span>
+            <select id="difficulty-filter">
+              <option value="all">All difficulty</option>
+              <option value="1">1 star</option>
+              <option value="2">2 stars</option>
+              <option value="3">3 stars</option>
+              <option value="4">4 stars</option>
+              <option value="5">5 stars</option>
+            </select>
+          </label>
+          <button class="btn btn-primary" id="apply-filters" type="button">Apply</button>
+        </div>
+
+        <div class="browser-layout">
+          <section class="table-pane" aria-label="Demo records">
+            <div class="table-summary">
+              <div>
+                <strong id="visible-task-count">18</strong>
+                <span id="visible-task-label">visible on this page</span>
+              </div>
+              <span class="browser-note">Preview manifest</span>
+            </div>
+            <div class="table-scroller">
+              <table class="explorer-table">
+                <thead>
+                  <tr>
+                    <th>Task</th>
+                    <th>Category</th>
+                    <th>Collector</th>
+                    <th>Frames</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody id="task-list"></tbody>
+              </table>
+            </div>
+            <div class="browser-pagination">
+              <span id="page-label">Page 1</span>
+              <div>
+                <button class="btn" id="prev-page" type="button">Previous</button>
+                <button class="btn" id="next-page" type="button">Next</button>
+              </div>
+            </div>
+          </section>
+
+          <aside class="task-detail" aria-label="Selected demo detail">
+            <div class="detail-video-frame">
+              <video id="detail-video" controls muted loop playsinline poster="./assets/images/demo-poster.jpg">
+                <source src="./assets/videos/demo-placeholder.mp4" type="video/mp4">
+              </video>
+            </div>
+            <div class="detail-head">
+              <p class="kicker" id="detail-kicker">Demo detail</p>
+              <h3 id="detail-title">Put the carrot on the plate</h3>
+              <p id="detail-record-id">AXIS-500-D01</p>
+            </div>
+            <div id="task-summary" class="detail-meta-grid"></div>
+            <div class="detail-block">
+              <span>Description</span>
+              <p id="detail-description">Demo description will load here.</p>
+            </div>
+            <div class="detail-block">
+              <span>Objects</span>
+              <div class="object-chips" id="detail-tags"></div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>AXIS Data Browser</p>
+      <div class="footer-links">
+        <a href="#showcase">Demos</a>
+        <a href="#explorer">Explorer</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./assets/js/browser-data.js"></script>
+  <script src="./assets/js/browser.js"></script>
+  <script src="./assets/js/site.js"></script>
+</body>
+</html>
