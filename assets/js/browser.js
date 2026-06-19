@@ -35,6 +35,7 @@ const browserEls = {
 };
 
 const tasks = window.AXIS_BROWSER_DATA?.tasks || [];
+const sourceSummary = window.AXIS_BROWSER_DATA?.sourceSummary || {};
 const records = tasks.flatMap((task) => task.demos.map((demo) => ({ id: demo.id, task, demo })));
 browserState.selectedRecordId = records[0]?.id || null;
 
@@ -62,6 +63,7 @@ function getFilteredRecords() {
       demo.id,
       demo.collector,
       task.id,
+      task.taskId,
       task.title,
       task.slug,
       task.category,
@@ -199,6 +201,7 @@ function renderRecordDetail() {
   const selected = getSelectedRecord();
   if (!selected) return;
   const { task, demo } = selected;
+  const cleaning = demo.cleaning || task.cleaning || {};
   const viewAvailable = Boolean(demo.video?.[browserState.cameraView]);
   if (!viewAvailable) browserState.cameraView = demo.video?.thirdPerson ? "thirdPerson" : "wrist";
 
@@ -217,8 +220,8 @@ function renderRecordDetail() {
     <div><span>Scene</span><strong>${task.scene}</strong></div>
     <div><span>Episode</span><strong>${String(demo.sourceEpisodeIndex).padStart(3, "0")}</strong></div>
     <div><span>Views</span><strong>${demo.cameraViews.length}</strong></div>
-    <div><span>Clean Episodes</span><strong>${formatNumber(demo.cleaning.cleanEpisodes)}</strong></div>
-    <div><span>Clean Frames</span><strong>${formatNumber(demo.cleaning.cleanFrames)}</strong></div>
+    <div><span>Clean Episodes</span><strong>${formatNumber(cleaning.cleanEpisodes || 0)}</strong></div>
+    <div><span>Clean Frames</span><strong>${formatNumber(cleaning.cleanFrames || 0)}</strong></div>
   `;
 
   renderChips(browserEls.detailTags, task.objects);
@@ -264,8 +267,9 @@ function setupFilters() {
 }
 
 function initializeBrowser() {
-  const totalEpisodes = records.length;
-  if (browserEls.totalTasks) browserEls.totalTasks.textContent = formatNumber(tasks.length);
+  const totalEpisodes = sourceSummary.demoRecords || records.length;
+  const totalTasks = sourceSummary.cleanExportedTasks || tasks.length;
+  if (browserEls.totalTasks) browserEls.totalTasks.textContent = formatNumber(totalTasks);
   if (browserEls.totalEpisodes) browserEls.totalEpisodes.textContent = formatNumber(totalEpisodes);
   populateCategoryFilter();
   setupFilters();
