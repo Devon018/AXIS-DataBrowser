@@ -44,9 +44,11 @@ function formatNumber(value) {
 }
 
 function formatDuration(totalSeconds) {
-  const hours = Math.floor(totalSeconds / 3600);
-  const minutes = Math.floor((totalSeconds % 3600) / 60);
-  const seconds = Math.round(totalSeconds % 60);
+  const safeSeconds = Number.isFinite(totalSeconds) ? Math.max(0, totalSeconds) : 0;
+  const hours = Math.floor(safeSeconds / 3600);
+  const minutes = Math.floor((safeSeconds % 3600) / 60);
+  const seconds = Math.round(safeSeconds % 60);
+  if (safeSeconds <= 0) return "0s";
   if (hours > 0) return `${hours}h ${minutes}m`;
   if (minutes > 0) return `${minutes}m ${String(seconds).padStart(2, "0")}s`;
   return `${Math.max(1, seconds)}s`;
@@ -54,6 +56,37 @@ function formatDuration(totalSeconds) {
 
 function formatFrameValue(demo) {
   return `${demo.estimatedFrames ? "~" : ""}${formatNumber(demo.frames)}`;
+}
+
+function getTaskLocalStats(task) {
+  if (task.localStats) return task.localStats;
+  const fallbackFrames = task.cleaning?.cleanFrames || task.demos?.[0]?.frames || 0;
+  const fallbackFps = task.demos?.[0]?.targetHz || sourceSummary.fpsDefault || 30;
+  return {
+    episodes: task.cleaning?.cleanEpisodes || task.demos?.length || 0,
+    frames: fallbackFrames,
+    fps: fallbackFps,
+    durationSeconds: fallbackFrames / fallbackFps
+  };
+}
+
+function summarizeLocalRecords(recordSet) {
+  const taskMap = new Map();
+  recordSet.forEach(({ task }) => {
+    taskMap.set(task.id, task);
+  });
+
+  return [...taskMap.values()].reduce(
+    (summary, task) => {
+      const stats = getTaskLocalStats(task);
+      summary.tasks += 1;
+      summary.episodes += stats.episodes || 0;
+      summary.frames += stats.frames || 0;
+      summary.durationSeconds += stats.durationSeconds || 0;
+      return summary;
+    },
+    { tasks: 0, episodes: 0, frames: 0, durationSeconds: 0 }
+  );
 }
 
 function getFilteredRecords() {
@@ -149,8 +182,7 @@ function renderRecordTable() {
     browserEls.taskList.appendChild(row);
   });
 
-  const visibleSeconds = pageRecords.reduce((sum, record) => sum + record.demo.durationSeconds, 0);
-  const uniqueFilteredTasks = new Set(filtered.map((record) => record.task.id)).size;
+  const filteredSummary = summarizeLocalRecords(filtered);
 
   if (browserEls.visibleTaskCount) {
     browserEls.visibleTaskCount.textContent = formatNumber(pageRecords.length);
@@ -161,9 +193,9 @@ function renderRecordTable() {
   if (browserEls.pageLabel) {
     browserEls.pageLabel.textContent = `Page ${browserState.page} of ${totalPages}`;
   }
-  if (browserEls.filteredRecords) browserEls.filteredRecords.textContent = formatNumber(filtered.length);
-  if (browserEls.visibleDuration) browserEls.visibleDuration.textContent = formatDuration(visibleSeconds);
-  if (browserEls.filteredTasks) browserEls.filteredTasks.textContent = formatNumber(uniqueFilteredTasks);
+  if (browserEls.filteredRecords) browserEls.filteredRecords.textContent = formatNumber(filteredSummary.episodes);
+  if (browserEls.visibleDuration) browserEls.visibleDuration.textContent = formatDuration(filteredSummary.durationSeconds);
+  if (browserEls.filteredTasks) browserEls.filteredTasks.textContent = formatNumber(filteredSummary.tasks);
   if (browserEls.prevPage) browserEls.prevPage.disabled = browserState.page <= 1;
   if (browserEls.nextPage) browserEls.nextPage.disabled = browserState.page >= totalPages;
 }
@@ -202,6 +234,7 @@ function renderRecordDetail() {
   if (!selected) return;
   const { task, demo } = selected;
   const cleaning = demo.cleaning || task.cleaning || {};
+  const localStats = getTaskLocalStats(task);
   const viewAvailable = Boolean(demo.video?.[browserState.cameraView]);
   if (!viewAvailable) browserState.cameraView = demo.video?.thirdPerson ? "thirdPerson" : "wrist";
 
@@ -214,14 +247,14 @@ function renderRecordDetail() {
   browserEls.detailDescription.textContent = task.description;
 
   browserEls.taskSummary.innerHTML = `
-    <div><span>Duration</span><strong>${demo.duration}</strong></div>
-    <div><span>Frames</span><strong>${formatFrameValue(demo)}</strong></div>
+    <div><span>Preview Duration</span><strong>${demo.duration}</strong></div>
+    <div><span>Preview Frames</span><strong>${formatFrameValue(demo)}</strong></div>
     <div><span>Category</span><strong>${task.category}</strong></div>
     <div><span>Scene</span><strong>${task.scene}</strong></div>
     <div><span>Episode</span><strong>${String(demo.sourceEpisodeIndex).padStart(3, "0")}</strong></div>
     <div><span>Views</span><strong>${demo.cameraViews.length}</strong></div>
-    <div><span>Clean Episodes</span><strong>${formatNumber(cleaning.cleanEpisodes || 0)}</strong></div>
-    <div><span>Clean Frames</span><strong>${formatNumber(cleaning.cleanFrames || 0)}</strong></div>
+    <div><span>Local Demos</span><strong>${formatNumber(localStats.episodes || cleaning.cleanEpisodes || 0)}</strong></div>
+    <div><span>Local Duration</span><strong>${formatDuration(localStats.durationSeconds || 0)}</strong></div>
   `;
 
   renderChips(browserEls.detailTags, task.objects);
@@ -267,8 +300,8 @@ function setupFilters() {
 }
 
 function initializeBrowser() {
-  const totalEpisodes = sourceSummary.demoRecords || records.length;
-  const totalTasks = sourceSummary.cleanExportedTasks || tasks.length;
+  const totalEpisodes = sourceSummary.localDemoStats?.episodes || sourceSummary.demoRecords || records.length;
+  const totalTasks = sourceSummary.localDemoStats?.representedTasks || sourceSummary.cleanExportedTasks || tasks.length;
   if (browserEls.totalTasks) browserEls.totalTasks.textContent = formatNumber(totalTasks);
   if (browserEls.totalEpisodes) browserEls.totalEpisodes.textContent = formatNumber(totalEpisodes);
   populateCategoryFilter();

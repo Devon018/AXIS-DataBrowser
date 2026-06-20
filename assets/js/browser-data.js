@@ -20,7 +20,20 @@ window.AXIS_BROWSER_DATA = {
     "source": "axis-training/data_lerobot",
     "packagedVideoDir": "assets/videos/task-demos",
     "packagedVideoFiles": 400,
-    "transcodedLargeSourceFiles": 14
+    "transcodedLargeSourceFiles": 14,
+    "localDemoStats": {
+      "source": "axis-training/data_lerobot/local",
+      "taskDirectories": 230,
+      "representedTasks": 200,
+      "episodes": 140815,
+      "frames": 17516172,
+      "durationSeconds": 583872.4,
+      "fpsDefault": 30,
+      "excludedDirectories": {
+        "variantfix": 19,
+        "variant0Bad": 44
+      }
+    }
   },
   "tasks": [
     {
@@ -69,7 +82,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-800-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_800_isaac_state_train",
+        "episodes": 1791,
+        "frames": 410283,
+        "fps": 30,
+        "durationSeconds": 13676.1
+      }
     },
     {
       "id": "AXIS-801",
@@ -117,7 +137,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-801-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_801_isaac_state_train",
+        "episodes": 1590,
+        "frames": 200835,
+        "fps": 30,
+        "durationSeconds": 6694.5
+      }
     },
     {
       "id": "AXIS-802",
@@ -165,7 +192,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-802-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_802_isaac_state_train",
+        "episodes": 1490,
+        "frames": 151010,
+        "fps": 30,
+        "durationSeconds": 5033.666666666667
+      }
     },
     {
       "id": "AXIS-803",
@@ -213,7 +247,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-803-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_803_isaac_state_train",
+        "episodes": 1831,
+        "frames": 198011,
+        "fps": 30,
+        "durationSeconds": 6600.366666666667
+      }
     },
     {
       "id": "AXIS-804",
@@ -261,7 +302,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-804-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_804_isaac_state_train",
+        "episodes": 2710,
+        "frames": 353472,
+        "fps": 30,
+        "durationSeconds": 11782.4
+      }
     },
     {
       "id": "AXIS-806",
@@ -309,7 +357,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-806-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_806_isaac_state_train",
+        "episodes": 1511,
+        "frames": 227467,
+        "fps": 30,
+        "durationSeconds": 7582.233333333334
+      }
     },
     {
       "id": "AXIS-807",
@@ -357,7 +412,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-807-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_807_isaac_state_train",
+        "episodes": 1509,
+        "frames": 244369,
+        "fps": 30,
+        "durationSeconds": 8145.633333333333
+      }
     },
     {
       "id": "AXIS-808",
@@ -405,7 +467,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-808-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_808_isaac_state_train",
+        "episodes": 1373,
+        "frames": 177127,
+        "fps": 30,
+        "durationSeconds": 5904.233333333334
+      }
     },
     {
       "id": "AXIS-809",
@@ -453,7 +522,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-809-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_809_isaac_state_train",
+        "episodes": 2944,
+        "frames": 318210,
+        "fps": 30,
+        "durationSeconds": 10607
+      }
     },
     {
       "id": "AXIS-810",
@@ -501,7 +577,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-810-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_810_isaac_state_train",
+        "episodes": 1841,
+        "frames": 256648,
+        "fps": 30,
+        "durationSeconds": 8554.933333333332
+      }
     },
     {
       "id": "AXIS-813",
@@ -548,7 +631,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-813-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_813_isaac_state_train",
+        "episodes": 1197,
+        "frames": 154407,
+        "fps": 30,
+        "durationSeconds": 5146.9
+      }
     },
     {
       "id": "AXIS-814",
@@ -596,7 +686,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-814-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_814_isaac_state_train",
+        "episodes": 1201,
+        "frames": 162628,
+        "fps": 30,
+        "durationSeconds": 5420.933333333333
+      }
     },
     {
       "id": "AXIS-815",
@@ -644,7 +741,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-815-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_815_isaac_state_train",
+        "episodes": 1190,
+        "frames": 110428,
+        "fps": 30,
+        "durationSeconds": 3680.9333333333334
+      }
     },
     {
       "id": "AXIS-831",
@@ -692,7 +796,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-831-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_831_isaac_state_train",
+        "episodes": 1242,
+        "frames": 189582,
+        "fps": 30,
+        "durationSeconds": 6319.4
+      }
     },
     {
       "id": "AXIS-840",
@@ -740,7 +851,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-840-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_840_isaac_state_train",
+        "episodes": 858,
+        "frames": 137465,
+        "fps": 30,
+        "durationSeconds": 4582.166666666667
+      }
     },
     {
       "id": "AXIS-841",
@@ -788,7 +906,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-841-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_841_isaac_state_train",
+        "episodes": 1006,
+        "frames": 131885,
+        "fps": 30,
+        "durationSeconds": 4396.166666666667
+      }
     },
     {
       "id": "AXIS-842",
@@ -836,7 +961,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-842-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_842_isaac_state_train",
+        "episodes": 1115,
+        "frames": 125158,
+        "fps": 30,
+        "durationSeconds": 4171.933333333333
+      }
     },
     {
       "id": "AXIS-843",
@@ -885,7 +1017,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-843-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_843_isaac_state_train",
+        "episodes": 636,
+        "frames": 115737,
+        "fps": 30,
+        "durationSeconds": 3857.9
+      }
     },
     {
       "id": "AXIS-844",
@@ -932,7 +1071,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-844-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_844_isaac_state_train",
+        "episodes": 809,
+        "frames": 145767,
+        "fps": 30,
+        "durationSeconds": 4858.9
+      }
     },
     {
       "id": "AXIS-848",
@@ -980,7 +1126,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-848-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_848_isaac_state_train",
+        "episodes": 1217,
+        "frames": 147068,
+        "fps": 30,
+        "durationSeconds": 4902.266666666666
+      }
     },
     {
       "id": "AXIS-849",
@@ -1028,7 +1181,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-849-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_849_isaac_state_train",
+        "episodes": 10,
+        "frames": 5713,
+        "fps": 30,
+        "durationSeconds": 190.43333333333334
+      }
     },
     {
       "id": "AXIS-850",
@@ -1076,7 +1236,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-850-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_850_isaac_state_train",
+        "episodes": 1197,
+        "frames": 210704,
+        "fps": 30,
+        "durationSeconds": 7023.466666666666
+      }
     },
     {
       "id": "AXIS-851",
@@ -1124,7 +1291,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-851-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_851_isaac_state_train",
+        "episodes": 1129,
+        "frames": 123230,
+        "fps": 30,
+        "durationSeconds": 4107.666666666667
+      }
     },
     {
       "id": "AXIS-852",
@@ -1171,7 +1345,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-852-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_852_isaac_state_train",
+        "episodes": 10,
+        "frames": 2042,
+        "fps": 30,
+        "durationSeconds": 68.06666666666666
+      }
     },
     {
       "id": "AXIS-853",
@@ -1218,7 +1399,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-853-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_853_isaac_state_train",
+        "episodes": 813,
+        "frames": 137992,
+        "fps": 30,
+        "durationSeconds": 4599.733333333334
+      }
     },
     {
       "id": "AXIS-854",
@@ -1266,7 +1454,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-854-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_854_isaac_state_train",
+        "episodes": 10,
+        "frames": 3297,
+        "fps": 30,
+        "durationSeconds": 109.9
+      }
     },
     {
       "id": "AXIS-855",
@@ -1314,7 +1509,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-855-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_855_isaac_state_train",
+        "episodes": 1075,
+        "frames": 109725,
+        "fps": 30,
+        "durationSeconds": 3657.5
+      }
     },
     {
       "id": "AXIS-857",
@@ -1362,7 +1564,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-857-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_857_isaac_state_train",
+        "episodes": 10,
+        "frames": 1664,
+        "fps": 30,
+        "durationSeconds": 55.46666666666667
+      }
     },
     {
       "id": "AXIS-858",
@@ -1410,7 +1619,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-858-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_858_isaac_state_train",
+        "episodes": 917,
+        "frames": 88252,
+        "fps": 30,
+        "durationSeconds": 2941.733333333333
+      }
     },
     {
       "id": "AXIS-859",
@@ -1458,7 +1674,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-859-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_859_isaac_state_train",
+        "episodes": 1197,
+        "frames": 127626,
+        "fps": 30,
+        "durationSeconds": 4254.2
+      }
     },
     {
       "id": "AXIS-862",
@@ -1506,7 +1729,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-862-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_862_isaac_state_train",
+        "episodes": 1036,
+        "frames": 110251,
+        "fps": 30,
+        "durationSeconds": 3675.0333333333333
+      }
     },
     {
       "id": "AXIS-863",
@@ -1554,7 +1784,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-863-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_863_isaac_state_train",
+        "episodes": 893,
+        "frames": 147379,
+        "fps": 30,
+        "durationSeconds": 4912.633333333333
+      }
     },
     {
       "id": "AXIS-864",
@@ -1602,7 +1839,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-864-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_864_isaac_state_train",
+        "episodes": 994,
+        "frames": 110944,
+        "fps": 30,
+        "durationSeconds": 3698.133333333333
+      }
     },
     {
       "id": "AXIS-865",
@@ -1650,7 +1894,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-865-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_865_isaac_state_train",
+        "episodes": 854,
+        "frames": 111779,
+        "fps": 30,
+        "durationSeconds": 3725.9666666666667
+      }
     },
     {
       "id": "AXIS-866",
@@ -1697,7 +1948,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-866-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_866_isaac_state_train",
+        "episodes": 855,
+        "frames": 110412,
+        "fps": 30,
+        "durationSeconds": 3680.4
+      }
     },
     {
       "id": "AXIS-867",
@@ -1745,7 +2003,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-867-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_867_isaac_state_train",
+        "episodes": 777,
+        "frames": 104018,
+        "fps": 30,
+        "durationSeconds": 3467.266666666667
+      }
     },
     {
       "id": "AXIS-875",
@@ -1793,7 +2058,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-875-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_875_isaac_state_train",
+        "episodes": 1045,
+        "frames": 132045,
+        "fps": 30,
+        "durationSeconds": 4401.5
+      }
     },
     {
       "id": "AXIS-876",
@@ -1840,7 +2112,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-876-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_876_isaac_state_train",
+        "episodes": 10,
+        "frames": 1877,
+        "fps": 30,
+        "durationSeconds": 62.56666666666667
+      }
     },
     {
       "id": "AXIS-877",
@@ -1887,7 +2166,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-877-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_877_isaac_state_train",
+        "episodes": 10,
+        "frames": 2419,
+        "fps": 30,
+        "durationSeconds": 80.63333333333334
+      }
     },
     {
       "id": "AXIS-878",
@@ -1935,7 +2221,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-878-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_878_isaac_state_train",
+        "episodes": 10,
+        "frames": 2666,
+        "fps": 30,
+        "durationSeconds": 88.86666666666666
+      }
     },
     {
       "id": "AXIS-879",
@@ -1983,7 +2276,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-879-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_879_isaac_state_train",
+        "episodes": 10,
+        "frames": 2275,
+        "fps": 30,
+        "durationSeconds": 75.83333333333333
+      }
     },
     {
       "id": "AXIS-880",
@@ -2031,7 +2331,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-880-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_880_isaac_state_train",
+        "episodes": 10,
+        "frames": 3687,
+        "fps": 30,
+        "durationSeconds": 122.9
+      }
     },
     {
       "id": "AXIS-881",
@@ -2079,7 +2386,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-881-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_881_isaac_state_train",
+        "episodes": 10,
+        "frames": 1530,
+        "fps": 30,
+        "durationSeconds": 51
+      }
     },
     {
       "id": "AXIS-882",
@@ -2127,7 +2441,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-882-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_882_isaac_state_train",
+        "episodes": 10,
+        "frames": 1525,
+        "fps": 30,
+        "durationSeconds": 50.833333333333336
+      }
     },
     {
       "id": "AXIS-883",
@@ -2174,7 +2495,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-883-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_883_isaac_state_train",
+        "episodes": 904,
+        "frames": 108914,
+        "fps": 30,
+        "durationSeconds": 3630.4666666666667
+      }
     },
     {
       "id": "AXIS-884",
@@ -2221,7 +2549,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-884-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_884_isaac_state_train",
+        "episodes": 893,
+        "frames": 107335,
+        "fps": 30,
+        "durationSeconds": 3577.8333333333335
+      }
     },
     {
       "id": "AXIS-885",
@@ -2269,7 +2604,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-885-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_885_isaac_state_train",
+        "episodes": 10,
+        "frames": 2277,
+        "fps": 30,
+        "durationSeconds": 75.9
+      }
     },
     {
       "id": "AXIS-886",
@@ -2317,7 +2659,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-886-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_886_isaac_state_train",
+        "episodes": 866,
+        "frames": 102544,
+        "fps": 30,
+        "durationSeconds": 3418.133333333333
+      }
     },
     {
       "id": "AXIS-887",
@@ -2365,7 +2714,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-887-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_887_isaac_state_train",
+        "episodes": 974,
+        "frames": 113136,
+        "fps": 30,
+        "durationSeconds": 3771.2
+      }
     },
     {
       "id": "AXIS-888",
@@ -2413,7 +2769,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-888-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_888_isaac_state_train",
+        "episodes": 10,
+        "frames": 2236,
+        "fps": 30,
+        "durationSeconds": 74.53333333333333
+      }
     },
     {
       "id": "AXIS-889",
@@ -2461,7 +2824,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-889-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_889_isaac_state_train",
+        "episodes": 840,
+        "frames": 95759,
+        "fps": 30,
+        "durationSeconds": 3191.9666666666667
+      }
     },
     {
       "id": "AXIS-891",
@@ -2508,7 +2878,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-891-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_891_isaac_state_train",
+        "episodes": 971,
+        "frames": 101483,
+        "fps": 30,
+        "durationSeconds": 3382.766666666667
+      }
     },
     {
       "id": "AXIS-892",
@@ -2556,7 +2933,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-892-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_892_isaac_state_train",
+        "episodes": 730,
+        "frames": 61190,
+        "fps": 30,
+        "durationSeconds": 2039.6666666666667
+      }
     },
     {
       "id": "AXIS-894",
@@ -2604,7 +2988,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-894-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_894_isaac_state_train",
+        "episodes": 911,
+        "frames": 136744,
+        "fps": 30,
+        "durationSeconds": 4558.133333333333
+      }
     },
     {
       "id": "AXIS-895",
@@ -2652,7 +3043,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-895-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_895_isaac_state_train",
+        "episodes": 10,
+        "frames": 3315,
+        "fps": 30,
+        "durationSeconds": 110.5
+      }
     },
     {
       "id": "AXIS-896",
@@ -2700,7 +3098,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-896-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_896_isaac_state_train",
+        "episodes": 10,
+        "frames": 1731,
+        "fps": 30,
+        "durationSeconds": 57.7
+      }
     },
     {
       "id": "AXIS-897",
@@ -2748,7 +3153,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-897-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_897_isaac_state_train",
+        "episodes": 930,
+        "frames": 99303,
+        "fps": 30,
+        "durationSeconds": 3310.1
+      }
     },
     {
       "id": "AXIS-899",
@@ -2796,7 +3208,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-899-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_899_isaac_state_train",
+        "episodes": 1044,
+        "frames": 107661,
+        "fps": 30,
+        "durationSeconds": 3588.7
+      }
     },
     {
       "id": "AXIS-900",
@@ -2844,7 +3263,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-900-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_900_isaac_state_train",
+        "episodes": 1169,
+        "frames": 140252,
+        "fps": 30,
+        "durationSeconds": 4675.066666666667
+      }
     },
     {
       "id": "AXIS-901",
@@ -2892,7 +3318,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-901-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_901_isaac_state_train",
+        "episodes": 948,
+        "frames": 135772,
+        "fps": 30,
+        "durationSeconds": 4525.733333333334
+      }
     },
     {
       "id": "AXIS-902",
@@ -2940,7 +3373,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-902-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_902_isaac_state_train",
+        "episodes": 987,
+        "frames": 139401,
+        "fps": 30,
+        "durationSeconds": 4646.7
+      }
     },
     {
       "id": "AXIS-903",
@@ -2988,7 +3428,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-903-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_903_isaac_state_train",
+        "episodes": 10,
+        "frames": 2949,
+        "fps": 30,
+        "durationSeconds": 98.3
+      }
     },
     {
       "id": "AXIS-904",
@@ -3035,7 +3482,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-904-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_904_isaac_state_train",
+        "episodes": 923,
+        "frames": 95704,
+        "fps": 30,
+        "durationSeconds": 3190.133333333333
+      }
     },
     {
       "id": "AXIS-905",
@@ -3082,7 +3536,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-905-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_905_isaac_state_train",
+        "episodes": 927,
+        "frames": 117980,
+        "fps": 30,
+        "durationSeconds": 3932.6666666666665
+      }
     },
     {
       "id": "AXIS-918",
@@ -3130,7 +3591,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-918-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_918_isaac_state_train",
+        "episodes": 1198,
+        "frames": 164528,
+        "fps": 30,
+        "durationSeconds": 5484.266666666666
+      }
     },
     {
       "id": "AXIS-920",
@@ -3178,7 +3646,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-920-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_920_isaac_state_train",
+        "episodes": 1001,
+        "frames": 175298,
+        "fps": 30,
+        "durationSeconds": 5843.266666666666
+      }
     },
     {
       "id": "AXIS-921",
@@ -3225,7 +3700,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-921-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_921_isaac_state_train",
+        "episodes": 1031,
+        "frames": 142021,
+        "fps": 30,
+        "durationSeconds": 4734.033333333334
+      }
     },
     {
       "id": "AXIS-922",
@@ -3272,7 +3754,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-922-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_922_isaac_state_train",
+        "episodes": 1105,
+        "frames": 141862,
+        "fps": 30,
+        "durationSeconds": 4728.733333333334
+      }
     },
     {
       "id": "AXIS-923",
@@ -3320,7 +3809,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-923-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_923_isaac_state_train",
+        "episodes": 10,
+        "frames": 2345,
+        "fps": 30,
+        "durationSeconds": 78.16666666666667
+      }
     },
     {
       "id": "AXIS-927",
@@ -3368,7 +3864,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-927-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_927_isaac_state_train",
+        "episodes": 1053,
+        "frames": 148450,
+        "fps": 30,
+        "durationSeconds": 4948.333333333333
+      }
     },
     {
       "id": "AXIS-928",
@@ -3416,7 +3919,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-928-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_928_isaac_state_train",
+        "episodes": 10,
+        "frames": 2070,
+        "fps": 30,
+        "durationSeconds": 69
+      }
     },
     {
       "id": "AXIS-930",
@@ -3463,7 +3973,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-930-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_930_isaac_state_train",
+        "episodes": 994,
+        "frames": 115815,
+        "fps": 30,
+        "durationSeconds": 3860.5
+      }
     },
     {
       "id": "AXIS-937",
@@ -3511,7 +4028,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-937-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_937_isaac_state_train",
+        "episodes": 1077,
+        "frames": 128256,
+        "fps": 30,
+        "durationSeconds": 4275.2
+      }
     },
     {
       "id": "AXIS-938",
@@ -3559,7 +4083,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-938-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_938_isaac_state_train",
+        "episodes": 1220,
+        "frames": 139400,
+        "fps": 30,
+        "durationSeconds": 4646.666666666667
+      }
     },
     {
       "id": "AXIS-939",
@@ -3607,7 +4138,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-939-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_939_isaac_state_train",
+        "episodes": 10,
+        "frames": 1228,
+        "fps": 30,
+        "durationSeconds": 40.93333333333333
+      }
     },
     {
       "id": "AXIS-940",
@@ -3656,7 +4194,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-940-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_940_isaac_state_train",
+        "episodes": 530,
+        "frames": 72784,
+        "fps": 30,
+        "durationSeconds": 2426.133333333333
+      }
     },
     {
       "id": "AXIS-941",
@@ -3705,7 +4250,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-941-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_941_isaac_state_train",
+        "episodes": 378,
+        "frames": 56399,
+        "fps": 30,
+        "durationSeconds": 1879.9666666666667
+      }
     },
     {
       "id": "AXIS-942",
@@ -3754,7 +4306,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-942-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_942_isaac_state_train",
+        "episodes": 346,
+        "frames": 51404,
+        "fps": 30,
+        "durationSeconds": 1713.4666666666667
+      }
     },
     {
       "id": "AXIS-943",
@@ -3802,7 +4361,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-943-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_943_isaac_state_train",
+        "episodes": 1079,
+        "frames": 127982,
+        "fps": 30,
+        "durationSeconds": 4266.066666666667
+      }
     },
     {
       "id": "AXIS-944",
@@ -3850,7 +4416,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-944-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_944_isaac_state_train",
+        "episodes": 976,
+        "frames": 152155,
+        "fps": 30,
+        "durationSeconds": 5071.833333333333
+      }
     },
     {
       "id": "AXIS-945",
@@ -3899,7 +4472,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-945-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_945_isaac_state_train",
+        "episodes": 335,
+        "frames": 48105,
+        "fps": 30,
+        "durationSeconds": 1603.5
+      }
     },
     {
       "id": "AXIS-946",
@@ -3947,7 +4527,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-946-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_946_isaac_state_train",
+        "episodes": 917,
+        "frames": 144469,
+        "fps": 30,
+        "durationSeconds": 4815.633333333333
+      }
     },
     {
       "id": "AXIS-947",
@@ -3995,7 +4582,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-947-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_947_isaac_state_train",
+        "episodes": 1118,
+        "frames": 119168,
+        "fps": 30,
+        "durationSeconds": 3972.266666666667
+      }
     },
     {
       "id": "AXIS-948",
@@ -4044,7 +4638,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-948-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_948_isaac_state_train",
+        "episodes": 148,
+        "frames": 24544,
+        "fps": 30,
+        "durationSeconds": 818.1333333333333
+      }
     },
     {
       "id": "AXIS-949",
@@ -4092,7 +4693,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-949-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_949_isaac_state_train",
+        "episodes": 10,
+        "frames": 1720,
+        "fps": 30,
+        "durationSeconds": 57.333333333333336
+      }
     },
     {
       "id": "AXIS-950",
@@ -4140,7 +4748,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-950-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_950_isaac_state_train",
+        "episodes": 10,
+        "frames": 1794,
+        "fps": 30,
+        "durationSeconds": 59.8
+      }
     },
     {
       "id": "AXIS-951",
@@ -4188,7 +4803,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-951-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_951_isaac_state_train",
+        "episodes": 1070,
+        "frames": 121781,
+        "fps": 30,
+        "durationSeconds": 4059.366666666667
+      }
     },
     {
       "id": "AXIS-953",
@@ -4236,7 +4858,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-953-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_953_isaac_state_train",
+        "episodes": 1192,
+        "frames": 176014,
+        "fps": 30,
+        "durationSeconds": 5867.133333333333
+      }
     },
     {
       "id": "AXIS-954",
@@ -4284,7 +4913,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-954-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_954_isaac_state_train",
+        "episodes": 1195,
+        "frames": 118225,
+        "fps": 30,
+        "durationSeconds": 3940.8333333333335
+      }
     },
     {
       "id": "AXIS-962",
@@ -4332,7 +4968,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-962-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_962_isaac_state_train",
+        "episodes": 10,
+        "frames": 1639,
+        "fps": 30,
+        "durationSeconds": 54.63333333333333
+      }
     },
     {
       "id": "AXIS-963",
@@ -4380,7 +5023,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-963-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_963_isaac_state_train",
+        "episodes": 1189,
+        "frames": 149607,
+        "fps": 30,
+        "durationSeconds": 4986.9
+      }
     },
     {
       "id": "AXIS-964",
@@ -4428,7 +5078,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-964-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_964_isaac_state_train",
+        "episodes": 947,
+        "frames": 128328,
+        "fps": 30,
+        "durationSeconds": 4277.6
+      }
     },
     {
       "id": "AXIS-965",
@@ -4476,7 +5133,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-965-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_965_isaac_state_train",
+        "episodes": 946,
+        "frames": 109571,
+        "fps": 30,
+        "durationSeconds": 3652.366666666667
+      }
     },
     {
       "id": "AXIS-966",
@@ -4524,7 +5188,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-966-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_966_isaac_state_train",
+        "episodes": 1148,
+        "frames": 132096,
+        "fps": 30,
+        "durationSeconds": 4403.2
+      }
     },
     {
       "id": "AXIS-967",
@@ -4572,7 +5243,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-967-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_967_isaac_state_train",
+        "episodes": 10,
+        "frames": 1919,
+        "fps": 30,
+        "durationSeconds": 63.96666666666667
+      }
     },
     {
       "id": "AXIS-968",
@@ -4620,7 +5298,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-968-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_968_isaac_state_train",
+        "episodes": 1114,
+        "frames": 198846,
+        "fps": 30,
+        "durationSeconds": 6628.2
+      }
     },
     {
       "id": "AXIS-970",
@@ -4667,7 +5352,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-970-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_970_isaac_state_train",
+        "episodes": 10,
+        "frames": 1508,
+        "fps": 30,
+        "durationSeconds": 50.266666666666666
+      }
     },
     {
       "id": "AXIS-973",
@@ -4715,7 +5407,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-973-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_973_isaac_state_train",
+        "episodes": 1198,
+        "frames": 197642,
+        "fps": 30,
+        "durationSeconds": 6588.066666666667
+      }
     },
     {
       "id": "AXIS-974",
@@ -4763,7 +5462,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-974-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_974_isaac_state_train",
+        "episodes": 960,
+        "frames": 142546,
+        "fps": 30,
+        "durationSeconds": 4751.533333333334
+      }
     },
     {
       "id": "AXIS-975",
@@ -4811,7 +5517,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-975-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_975_isaac_state_train",
+        "episodes": 1190,
+        "frames": 187321,
+        "fps": 30,
+        "durationSeconds": 6244.033333333334
+      }
     },
     {
       "id": "AXIS-976",
@@ -4858,7 +5571,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-976-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_976_isaac_state_train",
+        "episodes": 10,
+        "frames": 1737,
+        "fps": 30,
+        "durationSeconds": 57.9
+      }
     },
     {
       "id": "AXIS-977",
@@ -4905,7 +5625,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-977-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_977_isaac_state_train",
+        "episodes": 10,
+        "frames": 1700,
+        "fps": 30,
+        "durationSeconds": 56.666666666666664
+      }
     },
     {
       "id": "AXIS-978",
@@ -4953,7 +5680,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-978-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_978_isaac_state_train",
+        "episodes": 1199,
+        "frames": 149469,
+        "fps": 30,
+        "durationSeconds": 4982.3
+      }
     },
     {
       "id": "AXIS-979",
@@ -5001,7 +5735,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-979-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_979_isaac_state_train",
+        "episodes": 1190,
+        "frames": 206352,
+        "fps": 30,
+        "durationSeconds": 6878.4
+      }
     },
     {
       "id": "AXIS-980",
@@ -5048,7 +5789,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-980-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_980_isaac_state_train",
+        "episodes": 911,
+        "frames": 105757,
+        "fps": 30,
+        "durationSeconds": 3525.233333333333
+      }
     },
     {
       "id": "AXIS-981",
@@ -5095,7 +5843,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-981-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_981_isaac_state_train",
+        "episodes": 10,
+        "frames": 1729,
+        "fps": 30,
+        "durationSeconds": 57.63333333333333
+      }
     },
     {
       "id": "AXIS-982",
@@ -5143,7 +5898,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-982-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_982_isaac_state_train",
+        "episodes": 814,
+        "frames": 145515,
+        "fps": 30,
+        "durationSeconds": 4850.5
+      }
     },
     {
       "id": "AXIS-983",
@@ -5191,7 +5953,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-983-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_983_isaac_state_train",
+        "episodes": 10,
+        "frames": 1564,
+        "fps": 30,
+        "durationSeconds": 52.13333333333333
+      }
     },
     {
       "id": "AXIS-984",
@@ -5239,7 +6008,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-984-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_984_isaac_state_train",
+        "episodes": 10,
+        "frames": 1673,
+        "fps": 30,
+        "durationSeconds": 55.766666666666666
+      }
     },
     {
       "id": "AXIS-985",
@@ -5287,7 +6063,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-985-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_985_isaac_state_train",
+        "episodes": 10,
+        "frames": 1772,
+        "fps": 30,
+        "durationSeconds": 59.06666666666667
+      }
     },
     {
       "id": "AXIS-986",
@@ -5335,7 +6118,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-986-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_986_isaac_state_train",
+        "episodes": 10,
+        "frames": 1382,
+        "fps": 30,
+        "durationSeconds": 46.06666666666667
+      }
     },
     {
       "id": "AXIS-988",
@@ -5382,7 +6172,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-988-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_988_isaac_state_train",
+        "episodes": 1213,
+        "frames": 123940,
+        "fps": 30,
+        "durationSeconds": 4131.333333333333
+      }
     },
     {
       "id": "AXIS-989",
@@ -5429,7 +6226,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-989-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_989_isaac_state_train",
+        "episodes": 10,
+        "frames": 1660,
+        "fps": 30,
+        "durationSeconds": 55.333333333333336
+      }
     },
     {
       "id": "AXIS-990",
@@ -5477,7 +6281,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-990-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_990_isaac_state_train",
+        "episodes": 942,
+        "frames": 100163,
+        "fps": 30,
+        "durationSeconds": 3338.766666666667
+      }
     },
     {
       "id": "AXIS-992",
@@ -5525,7 +6336,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-992-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_992_isaac_state_train",
+        "episodes": 106,
+        "frames": 5770,
+        "fps": 30,
+        "durationSeconds": 192.33333333333334
+      }
     },
     {
       "id": "AXIS-993",
@@ -5573,7 +6391,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-993-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_993_isaac_state_train",
+        "episodes": 799,
+        "frames": 90097,
+        "fps": 30,
+        "durationSeconds": 3003.233333333333
+      }
     },
     {
       "id": "AXIS-994",
@@ -5620,7 +6445,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-994-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_994_isaac_state_train",
+        "episodes": 1203,
+        "frames": 134623,
+        "fps": 30,
+        "durationSeconds": 4487.433333333333
+      }
     },
     {
       "id": "AXIS-995",
@@ -5668,7 +6500,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-995-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_995_isaac_state_train",
+        "episodes": 308,
+        "frames": 21047,
+        "fps": 30,
+        "durationSeconds": 701.5666666666667
+      }
     },
     {
       "id": "AXIS-996",
@@ -5716,7 +6555,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-996-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_996_isaac_state_train",
+        "episodes": 1203,
+        "frames": 217804,
+        "fps": 30,
+        "durationSeconds": 7260.133333333333
+      }
     },
     {
       "id": "AXIS-997",
@@ -5764,7 +6610,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-997-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_997_isaac_state_train",
+        "episodes": 1206,
+        "frames": 216421,
+        "fps": 30,
+        "durationSeconds": 7214.033333333334
+      }
     },
     {
       "id": "AXIS-998",
@@ -5812,7 +6665,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-998-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_998_isaac_state_train",
+        "episodes": 1205,
+        "frames": 116191,
+        "fps": 30,
+        "durationSeconds": 3873.0333333333333
+      }
     },
     {
       "id": "AXIS-999",
@@ -5860,7 +6720,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-999-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_999_isaac_state_train",
+        "episodes": 1199,
+        "frames": 150393,
+        "fps": 30,
+        "durationSeconds": 5013.1
+      }
     },
     {
       "id": "AXIS-1000",
@@ -5907,7 +6774,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1000-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1000_isaac_state_train",
+        "episodes": 10,
+        "frames": 1357,
+        "fps": 30,
+        "durationSeconds": 45.233333333333334
+      }
     },
     {
       "id": "AXIS-1001",
@@ -5954,7 +6828,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1001-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1001_isaac_state_train",
+        "episodes": 10,
+        "frames": 1717,
+        "fps": 30,
+        "durationSeconds": 57.233333333333334
+      }
     },
     {
       "id": "AXIS-1002",
@@ -6002,7 +6883,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1002-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1002_isaac_state_train",
+        "episodes": 1052,
+        "frames": 133475,
+        "fps": 30,
+        "durationSeconds": 4449.166666666667
+      }
     },
     {
       "id": "AXIS-1003",
@@ -6050,7 +6938,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1003-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1003_isaac_state_train",
+        "episodes": 1204,
+        "frames": 139463,
+        "fps": 30,
+        "durationSeconds": 4648.766666666666
+      }
     },
     {
       "id": "AXIS-1005",
@@ -6098,7 +6993,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1005-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1005_isaac_state_train",
+        "episodes": 1206,
+        "frames": 106114,
+        "fps": 30,
+        "durationSeconds": 3537.133333333333
+      }
     },
     {
       "id": "AXIS-1007",
@@ -6145,7 +7047,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1007-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1007_isaac_state_train",
+        "episodes": 1204,
+        "frames": 180629,
+        "fps": 30,
+        "durationSeconds": 6020.966666666666
+      }
     },
     {
       "id": "AXIS-1012",
@@ -6193,7 +7102,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1012-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1012_isaac_state_train",
+        "episodes": 1194,
+        "frames": 205352,
+        "fps": 30,
+        "durationSeconds": 6845.066666666667
+      }
     },
     {
       "id": "AXIS-1013",
@@ -6241,7 +7157,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1013-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1013_isaac_state_train",
+        "episodes": 1179,
+        "frames": 166938,
+        "fps": 30,
+        "durationSeconds": 5564.6
+      }
     },
     {
       "id": "AXIS-1015",
@@ -6289,7 +7212,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1015-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1015_isaac_state_train",
+        "episodes": 890,
+        "frames": 89106,
+        "fps": 30,
+        "durationSeconds": 2970.2
+      }
     },
     {
       "id": "AXIS-1017",
@@ -6336,7 +7266,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1017-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1017_isaac_state_train",
+        "episodes": 1205,
+        "frames": 137006,
+        "fps": 30,
+        "durationSeconds": 4566.866666666667
+      }
     },
     {
       "id": "AXIS-1018",
@@ -6383,7 +7320,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1018-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1018_isaac_state_train",
+        "episodes": 1131,
+        "frames": 177775,
+        "fps": 30,
+        "durationSeconds": 5925.833333333333
+      }
     },
     {
       "id": "AXIS-1019",
@@ -6431,7 +7375,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1019-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1019_isaac_state_train",
+        "episodes": 1204,
+        "frames": 126131,
+        "fps": 30,
+        "durationSeconds": 4204.366666666667
+      }
     },
     {
       "id": "AXIS-1020",
@@ -6479,7 +7430,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1020-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1020_isaac_state_train",
+        "episodes": 1213,
+        "frames": 148063,
+        "fps": 30,
+        "durationSeconds": 4935.433333333333
+      }
     },
     {
       "id": "AXIS-1021",
@@ -6527,7 +7485,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1021-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1021_isaac_state_train",
+        "episodes": 1145,
+        "frames": 166224,
+        "fps": 30,
+        "durationSeconds": 5540.8
+      }
     },
     {
       "id": "AXIS-1022",
@@ -6575,7 +7540,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1022-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1022_isaac_state_train",
+        "episodes": 1211,
+        "frames": 134589,
+        "fps": 30,
+        "durationSeconds": 4486.3
+      }
     },
     {
       "id": "AXIS-1023",
@@ -6622,7 +7594,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1023-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1023_isaac_state_train",
+        "episodes": 10,
+        "frames": 1652,
+        "fps": 30,
+        "durationSeconds": 55.06666666666667
+      }
     },
     {
       "id": "AXIS-1024",
@@ -6669,7 +7648,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1024-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1024_isaac_state_train",
+        "episodes": 1192,
+        "frames": 141560,
+        "fps": 30,
+        "durationSeconds": 4718.666666666667
+      }
     },
     {
       "id": "AXIS-1025",
@@ -6717,7 +7703,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1025-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1025_isaac_state_train",
+        "episodes": 1363,
+        "frames": 151136,
+        "fps": 30,
+        "durationSeconds": 5037.866666666667
+      }
     },
     {
       "id": "AXIS-1026",
@@ -6765,7 +7758,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1026-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1026_isaac_state_train",
+        "episodes": 1184,
+        "frames": 128282,
+        "fps": 30,
+        "durationSeconds": 4276.066666666667
+      }
     },
     {
       "id": "AXIS-1027",
@@ -6813,7 +7813,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1027-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1027_isaac_state_train",
+        "episodes": 1186,
+        "frames": 111501,
+        "fps": 30,
+        "durationSeconds": 3716.7
+      }
     },
     {
       "id": "AXIS-1028",
@@ -6861,7 +7868,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1028-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1028_isaac_state_train",
+        "episodes": 707,
+        "frames": 97816,
+        "fps": 30,
+        "durationSeconds": 3260.5333333333333
+      }
     },
     {
       "id": "AXIS-1029",
@@ -6909,7 +7923,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1029-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1029_isaac_state_train",
+        "episodes": 850,
+        "frames": 92337,
+        "fps": 30,
+        "durationSeconds": 3077.9
+      }
     },
     {
       "id": "AXIS-1030",
@@ -6956,7 +7977,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1030-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1030_isaac_state_train",
+        "episodes": 787,
+        "frames": 65028,
+        "fps": 30,
+        "durationSeconds": 2167.6
+      }
     },
     {
       "id": "AXIS-1032",
@@ -7004,7 +8032,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1032-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1032_isaac_state_train",
+        "episodes": 744,
+        "frames": 69996,
+        "fps": 30,
+        "durationSeconds": 2333.2
+      }
     },
     {
       "id": "AXIS-1033",
@@ -7052,7 +8087,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1033-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1033_isaac_state_train",
+        "episodes": 653,
+        "frames": 58881,
+        "fps": 30,
+        "durationSeconds": 1962.7
+      }
     },
     {
       "id": "AXIS-1034",
@@ -7100,7 +8142,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1034-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1034_isaac_state_train",
+        "episodes": 864,
+        "frames": 57741,
+        "fps": 30,
+        "durationSeconds": 1924.7
+      }
     },
     {
       "id": "AXIS-1036",
@@ -7147,7 +8196,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1036-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1036_isaac_state_train",
+        "episodes": 490,
+        "frames": 42336,
+        "fps": 30,
+        "durationSeconds": 1411.2
+      }
     },
     {
       "id": "AXIS-1037",
@@ -7194,7 +8250,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1037-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1037_isaac_state_train",
+        "episodes": 388,
+        "frames": 28360,
+        "fps": 30,
+        "durationSeconds": 945.3333333333334
+      }
     },
     {
       "id": "AXIS-1039",
@@ -7242,7 +8305,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1039-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1039_isaac_state_train",
+        "episodes": 298,
+        "frames": 18920,
+        "fps": 30,
+        "durationSeconds": 630.6666666666666
+      }
     },
     {
       "id": "AXIS-1040",
@@ -7290,7 +8360,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1040-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1040_isaac_state_train",
+        "episodes": 377,
+        "frames": 21202,
+        "fps": 30,
+        "durationSeconds": 706.7333333333333
+      }
     },
     {
       "id": "AXIS-1042",
@@ -7338,7 +8415,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1042-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1042_isaac_state_train",
+        "episodes": 249,
+        "frames": 12280,
+        "fps": 30,
+        "durationSeconds": 409.3333333333333
+      }
     },
     {
       "id": "AXIS-1043",
@@ -7385,7 +8469,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1043-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1043_isaac_state_train",
+        "episodes": 44,
+        "frames": 2158,
+        "fps": 30,
+        "durationSeconds": 71.93333333333334
+      }
     },
     {
       "id": "AXIS-1044",
@@ -7433,7 +8524,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1044-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1044_isaac_state_train",
+        "episodes": 52,
+        "frames": 2262,
+        "fps": 30,
+        "durationSeconds": 75.4
+      }
     },
     {
       "id": "AXIS-1045",
@@ -7481,7 +8579,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1045-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1045_isaac_state_train",
+        "episodes": 45,
+        "frames": 2095,
+        "fps": 30,
+        "durationSeconds": 69.83333333333333
+      }
     },
     {
       "id": "AXIS-1046",
@@ -7529,7 +8634,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1046-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1046_isaac_state_train",
+        "episodes": 44,
+        "frames": 1991,
+        "fps": 30,
+        "durationSeconds": 66.36666666666666
+      }
     },
     {
       "id": "AXIS-1047",
@@ -7577,7 +8689,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1047-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1047_isaac_state_train",
+        "episodes": 47,
+        "frames": 2034,
+        "fps": 30,
+        "durationSeconds": 67.8
+      }
     },
     {
       "id": "AXIS-1048",
@@ -7625,7 +8744,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1048-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1048_isaac_state_train",
+        "episodes": 42,
+        "frames": 1880,
+        "fps": 30,
+        "durationSeconds": 62.666666666666664
+      }
     },
     {
       "id": "AXIS-1049",
@@ -7672,7 +8798,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1049-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1049_isaac_state_train",
+        "episodes": 46,
+        "frames": 1989,
+        "fps": 30,
+        "durationSeconds": 66.3
+      }
     },
     {
       "id": "AXIS-1050",
@@ -7720,7 +8853,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1050-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1050_isaac_state_train",
+        "episodes": 33,
+        "frames": 1728,
+        "fps": 30,
+        "durationSeconds": 57.6
+      }
     },
     {
       "id": "AXIS-1051",
@@ -7768,7 +8908,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1051-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1051_isaac_state_train",
+        "episodes": 33,
+        "frames": 1685,
+        "fps": 30,
+        "durationSeconds": 56.166666666666664
+      }
     },
     {
       "id": "AXIS-1053",
@@ -7816,7 +8963,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1053-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1053_isaac_state_train",
+        "episodes": 31,
+        "frames": 1575,
+        "fps": 30,
+        "durationSeconds": 52.5
+      }
     },
     {
       "id": "AXIS-1055",
@@ -7864,7 +9018,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1055-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1055_isaac_state_train",
+        "episodes": 29,
+        "frames": 1601,
+        "fps": 30,
+        "durationSeconds": 53.36666666666667
+      }
     },
     {
       "id": "AXIS-1058",
@@ -7912,7 +9073,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1058-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1058_isaac_state_train",
+        "episodes": 1205,
+        "frames": 115753,
+        "fps": 30,
+        "durationSeconds": 3858.4333333333334
+      }
     },
     {
       "id": "AXIS-1059",
@@ -7960,7 +9128,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1059-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1059_isaac_state_train",
+        "episodes": 24,
+        "frames": 849,
+        "fps": 30,
+        "durationSeconds": 28.3
+      }
     },
     {
       "id": "AXIS-1060",
@@ -8007,7 +9182,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1060-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1060_isaac_state_train",
+        "episodes": 21,
+        "frames": 778,
+        "fps": 30,
+        "durationSeconds": 25.933333333333334
+      }
     },
     {
       "id": "AXIS-1061",
@@ -8054,7 +9236,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1061-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1061_isaac_state_train",
+        "episodes": 21,
+        "frames": 968,
+        "fps": 30,
+        "durationSeconds": 32.266666666666666
+      }
     },
     {
       "id": "AXIS-1062",
@@ -8102,7 +9291,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1062-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1062_isaac_state_train",
+        "episodes": 22,
+        "frames": 884,
+        "fps": 30,
+        "durationSeconds": 29.466666666666665
+      }
     },
     {
       "id": "AXIS-1064",
@@ -8150,7 +9346,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1064-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1064_isaac_state_train",
+        "episodes": 58,
+        "frames": 2684,
+        "fps": 30,
+        "durationSeconds": 89.46666666666667
+      }
     },
     {
       "id": "AXIS-1065",
@@ -8198,7 +9401,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1065-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1065_isaac_state_train",
+        "episodes": 60,
+        "frames": 2698,
+        "fps": 30,
+        "durationSeconds": 89.93333333333334
+      }
     },
     {
       "id": "AXIS-1066",
@@ -8246,7 +9456,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1066-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1066_isaac_state_train",
+        "episodes": 55,
+        "frames": 2749,
+        "fps": 30,
+        "durationSeconds": 91.63333333333334
+      }
     },
     {
       "id": "AXIS-1067",
@@ -8293,7 +9510,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1067-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1067_isaac_state_train",
+        "episodes": 69,
+        "frames": 2621,
+        "fps": 30,
+        "durationSeconds": 87.36666666666666
+      }
     },
     {
       "id": "AXIS-1068",
@@ -8341,7 +9565,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1068-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1068_isaac_state_train",
+        "episodes": 66,
+        "frames": 2686,
+        "fps": 30,
+        "durationSeconds": 89.53333333333333
+      }
     },
     {
       "id": "AXIS-1069",
@@ -8389,7 +9620,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1069-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1069_isaac_state_train",
+        "episodes": 52,
+        "frames": 2545,
+        "fps": 30,
+        "durationSeconds": 84.83333333333333
+      }
     },
     {
       "id": "AXIS-1070",
@@ -8437,7 +9675,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1070-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1070_isaac_state_train",
+        "episodes": 53,
+        "frames": 2608,
+        "fps": 30,
+        "durationSeconds": 86.93333333333334
+      }
     },
     {
       "id": "AXIS-1071",
@@ -8485,7 +9730,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1071-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1071_isaac_state_train",
+        "episodes": 54,
+        "frames": 2625,
+        "fps": 30,
+        "durationSeconds": 87.5
+      }
     },
     {
       "id": "AXIS-1072",
@@ -8533,7 +9785,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1072-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1072_isaac_state_train",
+        "episodes": 61,
+        "frames": 2361,
+        "fps": 30,
+        "durationSeconds": 78.7
+      }
     },
     {
       "id": "AXIS-1073",
@@ -8580,7 +9839,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1073-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1073_isaac_state_train",
+        "episodes": 58,
+        "frames": 2611,
+        "fps": 30,
+        "durationSeconds": 87.03333333333333
+      }
     },
     {
       "id": "AXIS-1074",
@@ -8628,7 +9894,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1074-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1074_isaac_state_train",
+        "episodes": 55,
+        "frames": 2598,
+        "fps": 30,
+        "durationSeconds": 86.6
+      }
     },
     {
       "id": "AXIS-1075",
@@ -8676,7 +9949,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1075-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1075_isaac_state_train",
+        "episodes": 60,
+        "frames": 2467,
+        "fps": 30,
+        "durationSeconds": 82.23333333333333
+      }
     },
     {
       "id": "AXIS-1076",
@@ -8724,7 +10004,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1076-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1076_isaac_state_train",
+        "episodes": 46,
+        "frames": 2304,
+        "fps": 30,
+        "durationSeconds": 76.8
+      }
     },
     {
       "id": "AXIS-1077",
@@ -8772,7 +10059,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1077-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1077_isaac_state_train",
+        "episodes": 54,
+        "frames": 2294,
+        "fps": 30,
+        "durationSeconds": 76.46666666666667
+      }
     },
     {
       "id": "AXIS-1079",
@@ -8820,7 +10114,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1079-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1079_isaac_state_train",
+        "episodes": 1196,
+        "frames": 126866,
+        "fps": 30,
+        "durationSeconds": 4228.866666666667
+      }
     },
     {
       "id": "AXIS-1080",
@@ -8868,7 +10169,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1080-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1080_isaac_state_train",
+        "episodes": 1205,
+        "frames": 155474,
+        "fps": 30,
+        "durationSeconds": 5182.466666666666
+      }
     },
     {
       "id": "AXIS-1081",
@@ -8916,7 +10224,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1081-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1081_isaac_state_train",
+        "episodes": 43,
+        "frames": 2293,
+        "fps": 30,
+        "durationSeconds": 76.43333333333334
+      }
     },
     {
       "id": "AXIS-1083",
@@ -8964,7 +10279,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1083-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1083_isaac_state_train",
+        "episodes": 1203,
+        "frames": 146763,
+        "fps": 30,
+        "durationSeconds": 4892.1
+      }
     },
     {
       "id": "AXIS-1084",
@@ -9012,7 +10334,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1084-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1084_isaac_state_train",
+        "episodes": 1204,
+        "frames": 150704,
+        "fps": 30,
+        "durationSeconds": 5023.466666666666
+      }
     },
     {
       "id": "AXIS-1085",
@@ -9060,7 +10389,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1085-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1085_isaac_state_train",
+        "episodes": 1204,
+        "frames": 147409,
+        "fps": 30,
+        "durationSeconds": 4913.633333333333
+      }
     },
     {
       "id": "AXIS-1088",
@@ -9108,7 +10444,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1088-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1088_isaac_state_train",
+        "episodes": 1200,
+        "frames": 125262,
+        "fps": 30,
+        "durationSeconds": 4175.4
+      }
     },
     {
       "id": "AXIS-1107",
@@ -9156,7 +10499,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1107-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1107_isaac_state_train",
+        "episodes": 621,
+        "frames": 25098,
+        "fps": 30,
+        "durationSeconds": 836.6
+      }
     },
     {
       "id": "AXIS-1111",
@@ -9203,7 +10553,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1111-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1111_isaac_state_train",
+        "episodes": 23,
+        "frames": 2014,
+        "fps": 30,
+        "durationSeconds": 67.13333333333334
+      }
     },
     {
       "id": "AXIS-1116",
@@ -9250,7 +10607,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1116-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1116_isaac_state_train",
+        "episodes": 1162,
+        "frames": 57846,
+        "fps": 30,
+        "durationSeconds": 1928.2
+      }
     },
     {
       "id": "AXIS-1139",
@@ -9297,7 +10661,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1139-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1139_isaac_state_train",
+        "episodes": 796,
+        "frames": 115187,
+        "fps": 30,
+        "durationSeconds": 3839.5666666666666
+      }
     },
     {
       "id": "AXIS-1140",
@@ -9344,7 +10715,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1140-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1140_isaac_state_train",
+        "episodes": 950,
+        "frames": 113805,
+        "fps": 30,
+        "durationSeconds": 3793.5
+      }
     },
     {
       "id": "AXIS-1141",
@@ -9391,7 +10769,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1141-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1141_isaac_state_train",
+        "episodes": 201,
+        "frames": 22642,
+        "fps": 30,
+        "durationSeconds": 754.7333333333333
+      }
     },
     {
       "id": "AXIS-1149",
@@ -9438,7 +10823,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1149-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1149_isaac_state_train",
+        "episodes": 1369,
+        "frames": 87781,
+        "fps": 30,
+        "durationSeconds": 2926.0333333333333
+      }
     },
     {
       "id": "AXIS-1150",
@@ -9485,7 +10877,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1150-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1150_isaac_state_train",
+        "episodes": 1183,
+        "frames": 109798,
+        "fps": 30,
+        "durationSeconds": 3659.9333333333334
+      }
     },
     {
       "id": "AXIS-1151",
@@ -9532,7 +10931,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1151-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1151_isaac_state_train",
+        "episodes": 937,
+        "frames": 113946,
+        "fps": 30,
+        "durationSeconds": 3798.2
+      }
     },
     {
       "id": "AXIS-1152",
@@ -9579,7 +10985,14 @@ window.AXIS_BROWSER_DATA = {
             "wrist": "./assets/videos/task-demos/task-1152-wrist.mp4"
           }
         }
-      ]
+      ],
+      "localStats": {
+        "source": "data_lerobot/local/task_1152_isaac_state_train",
+        "episodes": 1045,
+        "frames": 112342,
+        "fps": 30,
+        "durationSeconds": 3744.733333333333
+      }
     }
   ],
   "manifestNote": "One representative real demo per exported task. All required videos are packaged under assets/videos/task-demos. Large local fallback sources were transcoded to browser-friendly H.264 MP4; no placeholder videos or symlinks are used."

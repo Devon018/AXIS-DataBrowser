@@ -793,6 +793,159 @@
   font-weight: 620;
 }
 
+.augmentation-section {
+  padding: 86px 0 92px;
+  background: #090806;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.augmentation-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.78fr) minmax(520px, 1.22fr);
+  gap: 34px;
+  align-items: center;
+}
+
+.augmentation-copy {
+  min-width: 0;
+}
+
+.augmentation-copy h2 {
+  max-width: 620px;
+  color: #f6f0e8;
+  font-size: clamp(32px, 4.6vw, 58px);
+  font-weight: 280;
+  line-height: 0.98;
+}
+
+.augmentation-copy p:not(.kicker) {
+  max-width: 580px;
+  margin: 16px 0 0;
+  color: rgba(246, 240, 232, 0.42);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.augmentation-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 24px;
+}
+
+.augmentation-metrics div {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.035);
+}
+
+.augmentation-metrics strong,
+.augmentation-metrics span {
+  display: block;
+}
+
+.augmentation-metrics strong {
+  color: rgba(246, 240, 232, 0.86);
+  font-size: 13px;
+  font-weight: 620;
+}
+
+.augmentation-metrics span {
+  margin-top: 5px;
+  color: rgba(246, 240, 232, 0.34);
+  font-size: 11px;
+  font-weight: 640;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.augmentation-visual-stage {
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(190px, 0.55fr);
+  gap: 10px;
+}
+
+.augmentation-preview {
+  position: relative;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  background: #0c0a09;
+}
+
+.augmentation-preview video {
+  width: 100%;
+  height: 100%;
+  min-height: 146px;
+  object-fit: cover;
+  opacity: 0.82;
+}
+
+.augmentation-preview-main video {
+  min-height: 456px;
+}
+
+.augmentation-preview::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 42%, rgba(6, 5, 4, 0.78));
+  pointer-events: none;
+}
+
+.augmentation-preview div {
+  position: absolute;
+  left: 13px;
+  right: 13px;
+  bottom: 12px;
+  z-index: 1;
+}
+
+.augmentation-preview strong,
+.augmentation-preview span {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.augmentation-preview strong {
+  color: rgba(255, 255, 255, 0.88);
+  font-size: 13px;
+  font-weight: 650;
+}
+
+.augmentation-preview span {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.46);
+  font-size: 11px;
+  font-weight: 620;
+  text-transform: uppercase;
+}
+
+.augmentation-strip {
+  min-width: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.tone-wrist video {
+  filter: saturate(0.72) contrast(1.18);
+}
+
+.tone-light video {
+  filter: sepia(0.26) brightness(1.08);
+}
+
+.tone-scene video {
+  filter: hue-rotate(18deg) saturate(1.18);
+}
+
 .browser-shell {
   padding: 86px 0 96px;
   background: #060504;
@@ -1114,9 +1267,14 @@
 
 @media (max-width: 1080px) {
   .browser-hero-grid,
+  .augmentation-layout,
   .explorer-header,
   .browser-layout {
     grid-template-columns: 1fr;
+  }
+
+  .augmentation-visual-stage {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 0.46fr);
   }
 
   .task-detail {
@@ -1132,7 +1290,17 @@
 
   .browser-filters,
   .showcase-grid,
+  .augmentation-metrics,
+  .augmentation-visual-stage,
   .explorer-stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .augmentation-preview-main video {
+    min-height: 280px;
+  }
+
+  .augmentation-strip {
     grid-template-columns: 1fr;
   }
 
