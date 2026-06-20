@@ -27,6 +27,7 @@ const browserEls = {
   taskSummary: document.querySelector("#task-summary"),
   totalTasks: document.querySelector("#browser-total-tasks"),
   totalEpisodes: document.querySelector("#browser-total-episodes"),
+  totalDuration: document.querySelector("#browser-total-duration"),
   filteredRecords: document.querySelector("#filtered-records"),
   visibleDuration: document.querySelector("#visible-duration"),
   filteredTasks: document.querySelector("#filtered-tasks"),
@@ -36,6 +37,7 @@ const browserEls = {
 
 const tasks = window.AXIS_BROWSER_DATA?.tasks || [];
 const sourceSummary = window.AXIS_BROWSER_DATA?.sourceSummary || {};
+const remoteUnrenderedTasks = window.AXIS_BROWSER_DATA?.remoteUnrenderedTasks || [];
 const records = tasks.flatMap((task) => task.demos.map((demo) => ({ id: demo.id, task, demo })));
 browserState.selectedRecordId = records[0]?.id || null;
 
@@ -87,6 +89,44 @@ function summarizeLocalRecords(recordSet) {
     },
     { tasks: 0, episodes: 0, frames: 0, durationSeconds: 0 }
   );
+}
+
+function summarizeRemoteTasks(remoteTasks) {
+  return remoteTasks.reduce(
+    (summary, task) => {
+      summary.tasks += 1;
+      summary.episodes += task.trajectoryCount || 0;
+      summary.durationSeconds += task.durationSeconds || 0;
+      return summary;
+    },
+    { tasks: 0, episodes: 0, frames: 0, durationSeconds: 0 }
+  );
+}
+
+function getFilteredRemoteTasks() {
+  if (browserState.category !== "all" || browserState.difficulty !== "all") return [];
+  const query = browserState.search.trim().toLowerCase();
+  return remoteUnrenderedTasks.filter((task) => {
+    if (!query) return true;
+    return [
+      task.id,
+      task.taskId,
+      task.title,
+      task.source,
+      task.state
+    ].join(" ").toLowerCase().includes(query);
+  });
+}
+
+function summarizeVisibleScope(localRecords) {
+  const summary = summarizeLocalRecords(localRecords);
+  const remoteSummary = summarizeRemoteTasks(getFilteredRemoteTasks());
+  return {
+    tasks: summary.tasks + remoteSummary.tasks,
+    episodes: summary.episodes + remoteSummary.episodes,
+    frames: summary.frames,
+    durationSeconds: summary.durationSeconds + remoteSummary.durationSeconds
+  };
 }
 
 function getFilteredRecords() {
@@ -182,7 +222,7 @@ function renderRecordTable() {
     browserEls.taskList.appendChild(row);
   });
 
-  const filteredSummary = summarizeLocalRecords(filtered);
+  const filteredSummary = summarizeVisibleScope(filtered);
 
   if (browserEls.visibleTaskCount) {
     browserEls.visibleTaskCount.textContent = formatNumber(pageRecords.length);
@@ -300,10 +340,20 @@ function setupFilters() {
 }
 
 function initializeBrowser() {
-  const totalEpisodes = sourceSummary.localDemoStats?.episodes || sourceSummary.demoRecords || records.length;
-  const totalTasks = sourceSummary.localDemoStats?.representedTasks || sourceSummary.cleanExportedTasks || tasks.length;
+  const totalEpisodes =
+    sourceSummary.combinedStats?.trajectories ||
+    sourceSummary.localDemoStats?.episodes ||
+    sourceSummary.demoRecords ||
+    records.length;
+  const totalTasks =
+    sourceSummary.combinedStats?.tasks ||
+    sourceSummary.localDemoStats?.representedTasks ||
+    sourceSummary.cleanExportedTasks ||
+    tasks.length;
+  const totalDuration = sourceSummary.combinedStats?.durationSeconds || sourceSummary.localDemoStats?.durationSeconds || 0;
   if (browserEls.totalTasks) browserEls.totalTasks.textContent = formatNumber(totalTasks);
   if (browserEls.totalEpisodes) browserEls.totalEpisodes.textContent = formatNumber(totalEpisodes);
+  if (browserEls.totalDuration) browserEls.totalDuration.textContent = formatDuration(totalDuration);
   populateCategoryFilter();
   setupFilters();
   setupPagination();
