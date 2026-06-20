@@ -18,7 +18,9 @@ window.AXIS_BROWSER_DATA = {
     "videoFiles": 400,
     "fpsDefault": 30,
     "source": "axis-training/data_lerobot",
-    "videoMount": "assets/videos/data_lerobot -> /home/shmqd/workspace/dihong/axis-training/data_lerobot"
+    "packagedVideoDir": "assets/videos/task-demos",
+    "packagedVideoFiles": 400,
+    "transcodedLargeSourceFiles": 14
   },
   "tasks": [
     {
@@ -63,8 +65,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_800_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_800_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-800-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-800-wrist.mp4"
           }
         }
       ]
@@ -111,8 +113,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_801_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_801_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-801-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-801-wrist.mp4"
           }
         }
       ]
@@ -159,8 +161,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_802_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_802_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-802-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-802-wrist.mp4"
           }
         }
       ]
@@ -207,8 +209,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_803_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_803_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-803-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-803-wrist.mp4"
           }
         }
       ]
@@ -255,8 +257,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_804_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_804_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-804-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-804-wrist.mp4"
           }
         }
       ]
@@ -303,8 +305,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_806_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_806_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-806-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-806-wrist.mp4"
           }
         }
       ]
@@ -351,8 +353,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_807_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_807_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-807-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-807-wrist.mp4"
           }
         }
       ]
@@ -399,8 +401,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_808_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_808_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-808-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-808-wrist.mp4"
           }
         }
       ]
@@ -447,8 +449,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_809_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_809_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-809-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-809-wrist.mp4"
           }
         }
       ]
@@ -495,8 +497,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_810_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_810_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-810-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-810-wrist.mp4"
           }
         }
       ]
@@ -542,8 +544,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_813_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_813_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-813-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-813-wrist.mp4"
           }
         }
       ]
@@ -590,8 +592,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_814_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_814_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-814-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-814-wrist.mp4"
           }
         }
       ]
@@ -638,8 +640,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_815_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_815_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-815-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-815-wrist.mp4"
           }
         }
       ]
@@ -686,8 +688,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_831_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_831_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-831-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-831-wrist.mp4"
           }
         }
       ]
@@ -734,8 +736,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_840_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_840_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-840-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-840-wrist.mp4"
           }
         }
       ]
@@ -782,8 +784,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_841_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_841_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-841-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-841-wrist.mp4"
           }
         }
       ]
@@ -830,8 +832,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_842_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_842_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-842-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-842-wrist.mp4"
           }
         }
       ]
@@ -879,8 +881,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_843_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_843_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-843-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-843-wrist.mp4"
           }
         }
       ]
@@ -926,8 +928,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_844_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_844_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-844-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-844-wrist.mp4"
           }
         }
       ]
@@ -974,8 +976,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_848_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_848_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-848-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-848-wrist.mp4"
           }
         }
       ]
@@ -1022,8 +1024,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_849_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_849_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-849-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-849-wrist.mp4"
           }
         }
       ]
@@ -1070,8 +1072,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_850_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_850_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-850-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-850-wrist.mp4"
           }
         }
       ]
@@ -1118,8 +1120,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_851_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_851_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-851-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-851-wrist.mp4"
           }
         }
       ]
@@ -1165,8 +1167,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_852_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_852_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-852-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-852-wrist.mp4"
           }
         }
       ]
@@ -1212,8 +1214,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_853_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_853_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-853-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-853-wrist.mp4"
           }
         }
       ]
@@ -1260,8 +1262,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_854_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_854_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-854-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-854-wrist.mp4"
           }
         }
       ]
@@ -1308,8 +1310,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_855_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_855_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-855-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-855-wrist.mp4"
           }
         }
       ]
@@ -1356,8 +1358,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_857_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_857_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-857-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-857-wrist.mp4"
           }
         }
       ]
@@ -1404,8 +1406,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_858_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_858_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-858-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-858-wrist.mp4"
           }
         }
       ]
@@ -1452,8 +1454,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_859_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_859_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-859-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-859-wrist.mp4"
           }
         }
       ]
@@ -1500,8 +1502,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_862_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_862_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-862-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-862-wrist.mp4"
           }
         }
       ]
@@ -1548,8 +1550,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_863_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_863_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-863-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-863-wrist.mp4"
           }
         }
       ]
@@ -1596,8 +1598,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_864_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_864_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-864-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-864-wrist.mp4"
           }
         }
       ]
@@ -1644,8 +1646,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_865_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_865_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-865-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-865-wrist.mp4"
           }
         }
       ]
@@ -1691,8 +1693,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_866_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_866_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-866-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-866-wrist.mp4"
           }
         }
       ]
@@ -1739,8 +1741,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_867_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_867_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-867-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-867-wrist.mp4"
           }
         }
       ]
@@ -1787,8 +1789,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_875_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_875_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-875-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-875-wrist.mp4"
           }
         }
       ]
@@ -1834,8 +1836,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_876_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_876_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-876-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-876-wrist.mp4"
           }
         }
       ]
@@ -1881,8 +1883,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_877_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_877_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-877-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-877-wrist.mp4"
           }
         }
       ]
@@ -1929,8 +1931,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_878_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_878_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-878-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-878-wrist.mp4"
           }
         }
       ]
@@ -1977,8 +1979,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_879_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_879_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-879-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-879-wrist.mp4"
           }
         }
       ]
@@ -2025,8 +2027,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_880_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_880_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-880-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-880-wrist.mp4"
           }
         }
       ]
@@ -2073,8 +2075,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_881_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_881_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-881-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-881-wrist.mp4"
           }
         }
       ]
@@ -2121,8 +2123,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_882_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_882_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-882-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-882-wrist.mp4"
           }
         }
       ]
@@ -2168,8 +2170,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_883_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_883_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-883-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-883-wrist.mp4"
           }
         }
       ]
@@ -2215,8 +2217,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_884_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_884_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-884-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-884-wrist.mp4"
           }
         }
       ]
@@ -2263,8 +2265,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_885_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_885_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-885-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-885-wrist.mp4"
           }
         }
       ]
@@ -2311,8 +2313,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_886_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_886_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-886-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-886-wrist.mp4"
           }
         }
       ]
@@ -2359,8 +2361,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_887_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_887_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-887-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-887-wrist.mp4"
           }
         }
       ]
@@ -2407,8 +2409,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_888_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_888_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-888-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-888-wrist.mp4"
           }
         }
       ]
@@ -2455,8 +2457,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_889_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_889_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-889-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-889-wrist.mp4"
           }
         }
       ]
@@ -2502,8 +2504,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_891_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_891_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-891-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-891-wrist.mp4"
           }
         }
       ]
@@ -2550,8 +2552,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_892_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_892_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-892-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-892-wrist.mp4"
           }
         }
       ]
@@ -2598,8 +2600,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_894_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_894_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-894-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-894-wrist.mp4"
           }
         }
       ]
@@ -2646,8 +2648,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_895_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_895_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-895-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-895-wrist.mp4"
           }
         }
       ]
@@ -2694,8 +2696,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_896_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_896_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-896-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-896-wrist.mp4"
           }
         }
       ]
@@ -2742,8 +2744,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_897_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_897_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-897-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-897-wrist.mp4"
           }
         }
       ]
@@ -2790,8 +2792,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_899_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_899_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-899-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-899-wrist.mp4"
           }
         }
       ]
@@ -2838,8 +2840,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_900_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_900_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-900-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-900-wrist.mp4"
           }
         }
       ]
@@ -2886,8 +2888,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_901_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_901_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-901-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-901-wrist.mp4"
           }
         }
       ]
@@ -2934,8 +2936,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_902_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_902_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-902-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-902-wrist.mp4"
           }
         }
       ]
@@ -2982,8 +2984,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_903_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_903_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-903-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-903-wrist.mp4"
           }
         }
       ]
@@ -3029,8 +3031,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_904_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_904_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-904-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-904-wrist.mp4"
           }
         }
       ]
@@ -3076,8 +3078,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_905_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_905_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-905-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-905-wrist.mp4"
           }
         }
       ]
@@ -3124,8 +3126,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_918_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_918_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-918-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-918-wrist.mp4"
           }
         }
       ]
@@ -3172,8 +3174,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_920_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_920_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-920-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-920-wrist.mp4"
           }
         }
       ]
@@ -3219,8 +3221,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_921_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_921_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-921-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-921-wrist.mp4"
           }
         }
       ]
@@ -3266,8 +3268,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_922_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_922_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-922-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-922-wrist.mp4"
           }
         }
       ]
@@ -3314,8 +3316,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_923_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_923_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-923-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-923-wrist.mp4"
           }
         }
       ]
@@ -3362,8 +3364,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_927_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_927_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-927-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-927-wrist.mp4"
           }
         }
       ]
@@ -3410,8 +3412,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_928_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_928_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-928-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-928-wrist.mp4"
           }
         }
       ]
@@ -3457,8 +3459,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_930_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_930_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-930-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-930-wrist.mp4"
           }
         }
       ]
@@ -3505,8 +3507,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_937_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_937_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-937-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-937-wrist.mp4"
           }
         }
       ]
@@ -3553,8 +3555,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_938_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_938_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-938-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-938-wrist.mp4"
           }
         }
       ]
@@ -3601,8 +3603,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_939_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_939_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-939-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-939-wrist.mp4"
           }
         }
       ]
@@ -3650,8 +3652,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_940_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_940_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-940-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-940-wrist.mp4"
           }
         }
       ]
@@ -3699,8 +3701,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_941_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_941_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-941-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-941-wrist.mp4"
           }
         }
       ]
@@ -3748,8 +3750,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_942_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_942_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-942-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-942-wrist.mp4"
           }
         }
       ]
@@ -3796,8 +3798,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_943_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_943_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-943-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-943-wrist.mp4"
           }
         }
       ]
@@ -3844,8 +3846,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_944_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_944_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-944-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-944-wrist.mp4"
           }
         }
       ]
@@ -3893,8 +3895,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_945_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_945_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-945-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-945-wrist.mp4"
           }
         }
       ]
@@ -3941,8 +3943,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_946_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_946_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-946-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-946-wrist.mp4"
           }
         }
       ]
@@ -3989,8 +3991,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_947_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_947_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-947-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-947-wrist.mp4"
           }
         }
       ]
@@ -4038,8 +4040,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_948_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_948_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-948-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-948-wrist.mp4"
           }
         }
       ]
@@ -4086,8 +4088,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_949_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_949_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-949-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-949-wrist.mp4"
           }
         }
       ]
@@ -4134,8 +4136,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_950_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_950_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-950-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-950-wrist.mp4"
           }
         }
       ]
@@ -4182,8 +4184,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_951_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_951_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-951-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-951-wrist.mp4"
           }
         }
       ]
@@ -4230,8 +4232,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_953_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_953_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-953-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-953-wrist.mp4"
           }
         }
       ]
@@ -4278,8 +4280,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_954_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_954_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-954-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-954-wrist.mp4"
           }
         }
       ]
@@ -4326,8 +4328,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_962_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_962_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-962-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-962-wrist.mp4"
           }
         }
       ]
@@ -4374,8 +4376,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_963_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_963_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-963-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-963-wrist.mp4"
           }
         }
       ]
@@ -4422,8 +4424,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_964_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_964_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-964-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-964-wrist.mp4"
           }
         }
       ]
@@ -4470,8 +4472,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_965_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_965_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-965-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-965-wrist.mp4"
           }
         }
       ]
@@ -4518,8 +4520,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_966_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_966_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-966-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-966-wrist.mp4"
           }
         }
       ]
@@ -4566,8 +4568,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_967_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_967_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-967-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-967-wrist.mp4"
           }
         }
       ]
@@ -4614,8 +4616,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_968_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_968_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-968-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-968-wrist.mp4"
           }
         }
       ]
@@ -4661,8 +4663,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_970_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_970_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-970-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-970-wrist.mp4"
           }
         }
       ]
@@ -4709,8 +4711,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_973_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_973_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-973-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-973-wrist.mp4"
           }
         }
       ]
@@ -4757,8 +4759,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_974_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_974_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-974-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-974-wrist.mp4"
           }
         }
       ]
@@ -4805,8 +4807,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_975_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_975_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-975-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-975-wrist.mp4"
           }
         }
       ]
@@ -4852,8 +4854,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_976_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_976_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-976-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-976-wrist.mp4"
           }
         }
       ]
@@ -4899,8 +4901,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_977_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_977_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-977-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-977-wrist.mp4"
           }
         }
       ]
@@ -4947,8 +4949,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_978_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_978_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-978-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-978-wrist.mp4"
           }
         }
       ]
@@ -4995,8 +4997,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_979_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_979_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-979-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-979-wrist.mp4"
           }
         }
       ]
@@ -5042,8 +5044,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_980_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_980_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-980-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-980-wrist.mp4"
           }
         }
       ]
@@ -5089,8 +5091,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_981_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_981_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-981-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-981-wrist.mp4"
           }
         }
       ]
@@ -5137,8 +5139,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_982_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_982_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-982-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-982-wrist.mp4"
           }
         }
       ]
@@ -5185,8 +5187,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_983_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_983_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-983-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-983-wrist.mp4"
           }
         }
       ]
@@ -5233,8 +5235,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_984_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_984_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-984-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-984-wrist.mp4"
           }
         }
       ]
@@ -5281,8 +5283,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_985_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_985_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-985-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-985-wrist.mp4"
           }
         }
       ]
@@ -5329,8 +5331,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_986_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_986_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-986-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-986-wrist.mp4"
           }
         }
       ]
@@ -5376,8 +5378,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_988_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_988_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-988-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-988-wrist.mp4"
           }
         }
       ]
@@ -5423,8 +5425,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_989_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_989_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-989-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-989-wrist.mp4"
           }
         }
       ]
@@ -5471,8 +5473,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_990_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_990_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-990-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-990-wrist.mp4"
           }
         }
       ]
@@ -5519,8 +5521,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_992_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_992_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-992-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-992-wrist.mp4"
           }
         }
       ]
@@ -5567,8 +5569,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_993_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_993_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-993-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-993-wrist.mp4"
           }
         }
       ]
@@ -5614,8 +5616,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_994_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_994_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-994-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-994-wrist.mp4"
           }
         }
       ]
@@ -5662,8 +5664,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_995_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_995_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-995-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-995-wrist.mp4"
           }
         }
       ]
@@ -5710,8 +5712,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_996_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_996_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-996-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-996-wrist.mp4"
           }
         }
       ]
@@ -5758,8 +5760,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_997_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_997_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-997-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-997-wrist.mp4"
           }
         }
       ]
@@ -5806,8 +5808,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_998_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_998_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-998-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-998-wrist.mp4"
           }
         }
       ]
@@ -5854,8 +5856,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_999_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_999_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-999-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-999-wrist.mp4"
           }
         }
       ]
@@ -5901,8 +5903,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1000_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1000_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1000-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1000-wrist.mp4"
           }
         }
       ]
@@ -5948,8 +5950,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1001_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1001_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1001-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1001-wrist.mp4"
           }
         }
       ]
@@ -5996,8 +5998,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1002_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1002_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1002-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1002-wrist.mp4"
           }
         }
       ]
@@ -6044,8 +6046,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1003_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1003_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1003-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1003-wrist.mp4"
           }
         }
       ]
@@ -6092,8 +6094,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1005_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1005_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1005-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1005-wrist.mp4"
           }
         }
       ]
@@ -6139,8 +6141,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1007_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1007_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1007-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1007-wrist.mp4"
           }
         }
       ]
@@ -6187,8 +6189,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1012_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1012_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1012-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1012-wrist.mp4"
           }
         }
       ]
@@ -6235,8 +6237,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1013_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1013_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1013-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1013-wrist.mp4"
           }
         }
       ]
@@ -6283,8 +6285,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1015_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1015_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1015-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1015-wrist.mp4"
           }
         }
       ]
@@ -6330,8 +6332,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1017_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1017_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1017-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1017-wrist.mp4"
           }
         }
       ]
@@ -6377,8 +6379,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1018_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1018_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1018-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1018-wrist.mp4"
           }
         }
       ]
@@ -6425,8 +6427,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1019_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1019_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1019-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1019-wrist.mp4"
           }
         }
       ]
@@ -6473,8 +6475,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1020_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1020_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1020-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1020-wrist.mp4"
           }
         }
       ]
@@ -6521,8 +6523,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1021_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1021_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1021-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1021-wrist.mp4"
           }
         }
       ]
@@ -6569,8 +6571,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1022_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1022_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1022-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1022-wrist.mp4"
           }
         }
       ]
@@ -6616,8 +6618,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1023_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1023_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1023-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1023-wrist.mp4"
           }
         }
       ]
@@ -6663,8 +6665,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1024_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1024_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1024-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1024-wrist.mp4"
           }
         }
       ]
@@ -6711,8 +6713,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1025_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1025_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1025-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1025-wrist.mp4"
           }
         }
       ]
@@ -6759,8 +6761,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1026_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1026_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1026-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1026-wrist.mp4"
           }
         }
       ]
@@ -6807,8 +6809,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1027_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1027_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1027-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1027-wrist.mp4"
           }
         }
       ]
@@ -6855,8 +6857,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1028_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1028_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1028-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1028-wrist.mp4"
           }
         }
       ]
@@ -6903,8 +6905,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1029_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1029_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1029-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1029-wrist.mp4"
           }
         }
       ]
@@ -6950,8 +6952,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1030_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1030_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1030-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1030-wrist.mp4"
           }
         }
       ]
@@ -6998,8 +7000,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1032_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1032_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1032-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1032-wrist.mp4"
           }
         }
       ]
@@ -7046,8 +7048,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1033_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1033_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1033-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1033-wrist.mp4"
           }
         }
       ]
@@ -7094,8 +7096,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1034_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1034_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1034-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1034-wrist.mp4"
           }
         }
       ]
@@ -7141,8 +7143,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1036_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1036_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1036-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1036-wrist.mp4"
           }
         }
       ]
@@ -7188,8 +7190,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1037_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1037_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1037-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1037-wrist.mp4"
           }
         }
       ]
@@ -7236,8 +7238,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1039_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1039_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1039-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1039-wrist.mp4"
           }
         }
       ]
@@ -7284,8 +7286,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1040_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1040_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1040-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1040-wrist.mp4"
           }
         }
       ]
@@ -7332,8 +7334,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1042_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1042_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1042-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1042-wrist.mp4"
           }
         }
       ]
@@ -7379,8 +7381,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1043_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1043_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1043-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1043-wrist.mp4"
           }
         }
       ]
@@ -7427,8 +7429,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1044_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1044_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1044-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1044-wrist.mp4"
           }
         }
       ]
@@ -7475,8 +7477,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1045_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1045_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1045-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1045-wrist.mp4"
           }
         }
       ]
@@ -7523,8 +7525,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1046_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1046_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1046-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1046-wrist.mp4"
           }
         }
       ]
@@ -7571,8 +7573,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1047_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1047_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1047-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1047-wrist.mp4"
           }
         }
       ]
@@ -7619,8 +7621,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1048_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1048_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1048-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1048-wrist.mp4"
           }
         }
       ]
@@ -7666,8 +7668,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1049_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1049_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1049-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1049-wrist.mp4"
           }
         }
       ]
@@ -7714,8 +7716,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1050_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1050_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1050-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1050-wrist.mp4"
           }
         }
       ]
@@ -7762,8 +7764,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1051_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1051_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1051-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1051-wrist.mp4"
           }
         }
       ]
@@ -7810,8 +7812,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1053_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1053_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1053-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1053-wrist.mp4"
           }
         }
       ]
@@ -7858,8 +7860,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1055_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1055_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1055-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1055-wrist.mp4"
           }
         }
       ]
@@ -7906,8 +7908,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1058_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1058_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1058-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1058-wrist.mp4"
           }
         }
       ]
@@ -7954,8 +7956,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1059_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1059_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1059-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1059-wrist.mp4"
           }
         }
       ]
@@ -8001,8 +8003,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1060_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1060_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1060-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1060-wrist.mp4"
           }
         }
       ]
@@ -8048,8 +8050,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1061_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1061_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1061-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1061-wrist.mp4"
           }
         }
       ]
@@ -8096,8 +8098,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1062_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1062_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1062-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1062-wrist.mp4"
           }
         }
       ]
@@ -8144,8 +8146,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1064_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1064_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1064-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1064-wrist.mp4"
           }
         }
       ]
@@ -8192,8 +8194,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1065_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1065_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1065-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1065-wrist.mp4"
           }
         }
       ]
@@ -8240,8 +8242,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1066_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1066_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1066-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1066-wrist.mp4"
           }
         }
       ]
@@ -8287,8 +8289,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1067_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1067_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1067-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1067-wrist.mp4"
           }
         }
       ]
@@ -8335,8 +8337,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1068_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1068_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1068-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1068-wrist.mp4"
           }
         }
       ]
@@ -8383,8 +8385,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1069_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1069_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1069-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1069-wrist.mp4"
           }
         }
       ]
@@ -8431,8 +8433,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1070_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1070_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1070-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1070-wrist.mp4"
           }
         }
       ]
@@ -8479,8 +8481,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1071_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1071_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1071-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1071-wrist.mp4"
           }
         }
       ]
@@ -8527,8 +8529,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1072_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1072_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1072-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1072-wrist.mp4"
           }
         }
       ]
@@ -8574,8 +8576,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1073_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1073_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1073-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1073-wrist.mp4"
           }
         }
       ]
@@ -8622,8 +8624,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1074_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1074_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1074-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1074-wrist.mp4"
           }
         }
       ]
@@ -8670,8 +8672,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1075_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1075_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1075-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1075-wrist.mp4"
           }
         }
       ]
@@ -8718,8 +8720,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1076_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1076_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1076-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1076-wrist.mp4"
           }
         }
       ]
@@ -8766,8 +8768,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1077_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1077_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1077-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1077-wrist.mp4"
           }
         }
       ]
@@ -8814,8 +8816,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1079_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1079_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1079-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1079-wrist.mp4"
           }
         }
       ]
@@ -8862,8 +8864,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1080_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1080_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1080-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1080-wrist.mp4"
           }
         }
       ]
@@ -8910,8 +8912,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1081_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1081_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1081-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1081-wrist.mp4"
           }
         }
       ]
@@ -8958,8 +8960,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1083_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1083_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1083-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1083-wrist.mp4"
           }
         }
       ]
@@ -9006,8 +9008,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1084_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1084_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1084-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1084-wrist.mp4"
           }
         }
       ]
@@ -9054,8 +9056,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1085_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1085_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1085-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1085-wrist.mp4"
           }
         }
       ]
@@ -9102,8 +9104,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/local/task_1088_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/local/task_1088_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1088-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1088-wrist.mp4"
           }
         }
       ]
@@ -9150,8 +9152,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1107_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1107_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1107-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1107-wrist.mp4"
           }
         }
       ]
@@ -9197,8 +9199,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1111_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1111_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1111-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1111-wrist.mp4"
           }
         }
       ]
@@ -9244,8 +9246,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1116_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1116_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1116-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1116-wrist.mp4"
           }
         }
       ]
@@ -9291,8 +9293,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1139_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1139_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1139-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1139-wrist.mp4"
           }
         }
       ]
@@ -9338,8 +9340,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1140_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1140_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1140-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1140-wrist.mp4"
           }
         }
       ]
@@ -9385,8 +9387,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1141_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1141_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1141-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1141-wrist.mp4"
           }
         }
       ]
@@ -9432,8 +9434,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1149_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1149_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1149-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1149-wrist.mp4"
           }
         }
       ]
@@ -9479,8 +9481,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1150_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1150_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1150-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1150-wrist.mp4"
           }
         }
       ]
@@ -9526,8 +9528,8 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1151_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1151_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1151-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1151-wrist.mp4"
           }
         }
       ]
@@ -9573,12 +9575,12 @@ window.AXIS_BROWSER_DATA = {
             "wrist RGB"
           ],
           "video": {
-            "thirdPerson": "./assets/videos/data_lerobot/clean/task_1152_isaac_state_train/videos/observation.images.third_person/chunk-000/file-000.mp4",
-            "wrist": "./assets/videos/data_lerobot/clean/task_1152_isaac_state_train/videos/observation.images.wrist/chunk-000/file-000.mp4"
+            "thirdPerson": "./assets/videos/task-demos/task-1152-third-person.mp4",
+            "wrist": "./assets/videos/task-demos/task-1152-wrist.mp4"
           }
         }
       ]
     }
   ],
-  "manifestNote": "One representative real demo per exported task. Clean videos are preferred; tasks without clean videos use local LeRobot videos as fallback. No placeholder videos are used."
+  "manifestNote": "One representative real demo per exported task. All required videos are packaged under assets/videos/task-demos. Large local fallback sources were transcoded to browser-friendly H.264 MP4; no placeholder videos or symlinks are used."
 };
